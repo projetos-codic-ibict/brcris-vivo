@@ -1,0 +1,30 @@
+.axis text {
+  font: 10px sans-serif;
+}
+
+.legend {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 80%;
+    text-align: left;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis--x path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.tooltip {
+  background-color: #eee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 80%;
+  color: #333;
+  padding: 6px;
+}

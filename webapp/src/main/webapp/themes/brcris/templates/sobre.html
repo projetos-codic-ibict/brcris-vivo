@@ -1,0 +1,208 @@
+<head>
+
+<!-- vitro base styles (application-wide) -->
+<link rel="stylesheet" href="/vivo/css/vitro.css">
+<link rel="stylesheet" href="/vivo/css/visualization/visualization.css?version=1580">
+<link rel="stylesheet" href="/vivo/css/individual/individual-property-groups.css?version=d588">
+<link rel="stylesheet" href="/vivo/css/individual/individual.css?version=d588">
+<link rel="stylesheet" href="/vivo/css/individual/individual-vivo.css?version=1580">
+<link rel="stylesheet" href="/vivo/js/jquery-ui/css/smoothness/jquery-ui-1.12.1.css?version=d588">
+<link rel="stylesheet" type="text/css" href="/vivo/css/jquery_plugins/qtip/jquery.qtip.min.css?version=d588">
+<link rel="stylesheet" href="/vivo/css/edit.css">
+<link rel="stylesheet" href="/vivo/themes/brcris/css/screen.css">
+<link rel="stylesheet" href="/vivo/themes/brcris/css/brcris.css">
+<link rel="stylesheet" href="/vivo/themes/brcris/css/custom.css">
+<script>
+var i18nStrings = {
+    allCapitalized: 'All',
+};
+</script> 
+<script type="text/javascript" src="/vivo/js/jquery-1.12.4.min.js"></script> 
+<script type="text/javascript" src="/vivo/js/jquery-migrate-1.4.1.js"></script> 
+<script type="text/javascript" src="/vivo/js/vitroUtils.js"></script> 
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/vivo/js/html5.js"></script>
+<![endif]--> 
+
+<script type="text/javascript" src="/vivo/js/amplify/amplify.store.min.js?version=d588"></script> 
+<script type="text/javascript" src="/vivo/js/tiny_mce/tiny_mce.js?version=d588"></script> 
+<script type="text/javascript" src="/vivo/js/jquery_plugins/qtip/jquery.qtip.min.js?version=d588"></script> 
+<script type="text/javascript" src="/vivo/js/jquery_plugins/jquery.truncator.js?version=1580"></script> 
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="/vivo/js/selectivizr.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rdf+xml" href="/vivo/individual/pers_de987108-f882-4aec-a342-ad76f5740381/pers_de987108-f882-4aec-a342-ad76f5740381.rdf">
+<link rel="shortcut icon" type="image/x-icon" href="/vivo/favicon.ico">
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/loader.js"></script><script id="altmetric-embed-js" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/altmetric_badges-4b75721c66722d87e7882ff5b18f12d295f4ac71b1a804b2c06ae36a76542439.js"></script>
+<link id="plx-css-popup" type="text/css" rel="stylesheet" href="//cdn.plu.mx/popup.css">
+<script type="text/javascript" src="//cdn.plu.mx/extjs/xss.js"></script>
+<style id="researchAreaCSS">
+.qtip {
+	font-size: 14px;
+	max-width: none !important;
+}
+.researchAreaTip {
+	background: url(/vivo/images/individual/researchAreaBubble.png) no-repeat;
+}
+</style>
+<style id="bubbleCSS">
+.qtip {
+	font-size: 14px;
+	max-width: none !important;
+}
+.bubbleTip {
+url(/vivo/images/individual/toolTipBubble.png) no-repeat;
+}
+</style>
+<style id="uriIconCSS">
+.qtip {
+	font-size: 14px;
+	max-width: none !important;
+}
+.uriIconTip {
+	background-color: #f1f2ee;
+}
+</style>
+<link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/core/tooltip.css">
+<link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/util/util.css">
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_graphics_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_imagechart_module.js"></script>
+<link id="load-css-2" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/table/table.css">
+<link id="load-css-3" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/util/format.css">
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_fw_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/third_party/dygraphs/dygraph-tickers-combined.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/third_party/webfontloader/webfont.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_bar_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_corechart_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_table_module.js"></script>
+</head>
+
+<header> 
+  
+  <!--[if lte IE 8]>
+    <noscript>
+        <p class="ie-alert">This site uses HTML elements that are not recognized by Internet Explorer 8 and below in the absence of JavaScript. As a result, the site will not be rendered appropriately. To correct this, please either enable JavaScript, upgrade to Internet Explorer 9, or use another browser. Here are the <a href="http://www.enable-javascript.com"  title="java script instructions">instructions for enabling JavaScript in your web browser</a>.</p>
+    </noscript>
+    <![endif]--> 
+  
+  <script type="text/javascript">
+                var visualizationUrl = '/vivo/visualizationAjax?uri=https%3A%2F%2Fbrcris.ibict.br%2Findividual%2Fpers_de987108-f882-4aec-a342-ad76f5740381&template=foaf-person-wilma';
+                
+            </script> 
+  
+  <!-- Property group menu or tabs --> 
+  
+  <!-- 5 -->
+  <h2>Sobre</h2>
+  <ul class="propertyTabsList">
+    <li class="groupTabSpacer">&nbsp;</li>
+    <li class="nonSelectedGroupTab clickable" groupname="overview">Termo de uso</li>
+    <li class="groupTabSpacer">&nbsp;</li>
+    <li class="nonSelectedGroupTab clickable" groupname="publications">Fontes de Coleta</li>
+    <li class="groupTabSpacer">&nbsp;</li>
+    <li class="nonSelectedGroupTab clickable" groupname="location">Publicações</li>
+    <li class="groupTabSpacer">&nbsp;</li>
+    <li class="nonSelectedGroupTab clickable" groupname="arq">Arquitetura do Sistema</li>
+    <li class="groupTabSpacer">&nbsp;</li>
+    <li class="nonSelectedGroupTab clickable" groupname="history">Histórico</li>
+    <li class="groupTabSpacer">&nbsp;</li>	  
+  </ul>
+  <section id="overview" class="property-group" role="region" style="display: block; margin-bottom: 1px;">
+    <nav id="scroller" class="scroll-up" role="navigation"> <a href="#branding" title="scroll to property group menus"><img src="/vivo/images/individual/scroll-up.gif" alt="scroll to property group menus"></a> </nav>
+    <div id="overviewGroup">
+      <article class="property" role="article">
+        <h3>Termo de uso</h3>
+        <p class="text-about">O presente instrumento apresenta o Termo de Uso do BrCris (Ecossistema de Informação da Pesquisa Científica Brasileira), hospedado no sítio eletrônico &lt;<a href="https://brcris.ibict.br">https://brcris.ibict.br</a> &gt;, desenvolvido pelo Instituto Brasileiro de Informação em Ciência e Tecnologia (Ibict).</p>
+        </p>
+      </article>
+      <!-- end property --> 
+    </div>
+  </section>
+  <!-- end property-group -->
+  <section id="publications" class="property-group" role="region" style="margin-bottom: 1px;">
+    <nav id="scroller" class="scroll-up" role="navigation"> <a href="#branding" title="scroll to property group menus"> <img src="/vivo/images/individual/scroll-up.gif" alt="scroll to property group menus"> </a> </nav>
+    <div id="publicationsGroup">
+      <article class="property" role="article">
+        <h3>Fontes de Coleta</h3>
+        <p class="text-about">Donec ac ex malesuada, pulvinar felis quis, ultricies lacus. Ut urna mauris, sollicitudin ut magna sit amet, aliquam dignissim quam. Curabitur non egestas eros, quis faucibus mauris. Praesent vehicula bibendum purus at gravida. Pellentesque dictum ut sem quis pellentesque. Sed tincidunt dignissim dolor, nec sollicitudin sapien facilisis at. Vivamus faucibus lectus vel purus condimentum aliquam. Nullam semper lectus massa.</p>
+      </article>
+      <!-- end property --> 
+    </div>
+  </section>
+  <!-- end property-group -->
+  <section id="location" class="property-group" role="region" style="margin-bottom: 1px;">
+    <nav id="scroller" class="scroll-up" role="navigation"> <a href="#branding" title="scroll to property group menus"> <img src="/vivo/images/individual/scroll-up.gif" alt="scroll to property group menus"> </a> </nav>
+    <div id="locationGroup">
+      <article class="property" role="article">
+        <h3>Publicações</h3>
+        <p class="text-about">Sed lacinia, orci eu fermentum mattis, nibh ex cursus enim, sed efficitur libero tellus vel nisl. Morbi lorem nibh, aliquam sit amet tortor sed, euismod ultrices massa. Proin vestibulum blandit laoreet. Sed hendrerit eleifend porta. Praesent condimentum est est, a vehicula lorem facilisis eu. Duis eu nisl quis quam lobortis blandit mattis sit amet elit. Aenean et lacus sed nisi accumsan ultrices vitae vitae arcu. Vivamus erat orci, gravida at odio non, vehicula imperdiet est. Suspendisse dignissim mauris euismod imperdiet aliquam. Pellentesque volutpat vestibulum neque placerat euismod. Integer nulla tortor, volutpat at bibendum et, porta at enim. Praesent massa massa, condimentum nec scelerisque ut, auctor eu sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi id leo eu arcu suscipit tincidunt sed quis felis. Vivamus blandit id turpis et feugiat. Donec malesuada tincidunt pulvinar.</p>
+      </article>
+      <!-- end property --> 
+    </div>
+  </section>
+  <!-- end property-group -->
+  <section id="arq" class="property-group" role="region" style="margin-bottom: 1px;">
+    <nav id="scroller" class="scroll-up" role="navigation"> <a href="#branding" title="scroll to property group menus"> <img src="/vivo/images/individual/scroll-up.gif" alt="scroll to property group menus"> </a> </nav>
+    <div id="arqGroup">
+      <article class="property" role="article">
+        <h3>Arquitetura</h3>
+        <p class="text-about">Sed lacinia, orci eu fermentum mattis, nibh ex cursus enim, sed efficitur libero tellus vel nisl. Morbi lorem nibh, aliquam sit amet tortor sed, euismod ultrices massa. Proin vestibulum blandit laoreet. Sed hendrerit eleifend porta. Praesent condimentum est est, a vehicula lorem facilisis eu. Duis eu nisl quis quam lobortis blandit mattis sit amet elit. Aenean et lacus sed nisi accumsan ultrices vitae vitae arcu. Vivamus erat orci, gravida at odio non, vehicula imperdiet est. Suspendisse dignissim mauris euismod imperdiet aliquam. Pellentesque volutpat vestibulum neque placerat euismod. Integer nulla tortor, volutpat at bibendum et, porta at enim. Praesent massa massa, condimentum nec scelerisque ut, auctor eu sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi id leo eu arcu suscipit tincidunt sed quis felis. Vivamus blandit id turpis et feugiat. Donec malesuada tincidunt pulvinar.</p>
+      </article>
+      <!-- end property --> 
+    </div>
+  </section>
+  <!-- end property-group -->
+  <section id="history" class="property-group" role="region" style="margin-bottom: 1px;">
+    <nav id="scroller" class="scroll-up" role="navigation"> <a href="#branding" title="scroll to property group menus"> <img src="/vivo/images/individual/scroll-up.gif" alt="scroll to property group menus"> </a> </nav>
+    <div id="historyGroup">
+      <article class="property" role="article">
+        <h3>Historico</h3>
+        <p class="text-about">Sed lacinia, orci eu fermentum mattis, nibh ex cursus enim, sed efficitur libero tellus vel nisl. Morbi lorem nibh, aliquam sit amet tortor sed, euismod ultrices massa. Proin vestibulum blandit laoreet. Sed hendrerit eleifend porta. Praesent condimentum est est, a vehicula lorem facilisis eu. Duis eu nisl quis quam lobortis blandit mattis sit amet elit. Aenean et lacus sed nisi accumsan ultrices vitae vitae arcu. Vivamus erat orci, gravida at odio non, vehicula imperdiet est. Suspendisse dignissim mauris euismod imperdiet aliquam. Pellentesque volutpat vestibulum neque placerat euismod. Integer nulla tortor, volutpat at bibendum et, porta at enim. Praesent massa massa, condimentum nec scelerisque ut, auctor eu sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi id leo eu arcu suscipit tincidunt sed quis felis. Vivamus blandit id turpis et feugiat. Donec malesuada tincidunt pulvinar.</p>
+      </article>
+      <!-- end property --> 
+    </div>
+  </section>
+  <!-- end property-group -->	
+  
+  <script>
+    var individualLocalName = "pers_de987108-f882-4aec-a342-ad76f5740381";
+</script> 
+  <script>
+        var individualRdfUrl = '/vivo/individual/pers_de987108-f882-4aec-a342-ad76f5740381/pers_de987108-f882-4aec-a342-ad76f5740381.rdf';
+    </script> 
+  <script>
+    var imagesPath = '/vivo/images';
+	var individualUri = 'https://brcris.ibict.br/individual/pers_de987108-f882-4aec-a342-ad76f5740381';
+	var individualPhoto = '';
+	var exportQrCodeUrl = '/vivo/qrcode?uri=https://brcris.ibict.br/individual/pers_de987108-f882-4aec-a342-ad76f5740381';
+	var baseUrl = '/vivo';
+    var i18nStrings = {
+        displayLess: 'less',
+        displayMoreEllipsis: '... more',
+        showMoreContent: 'show more content',
+        verboseTurnOff: 'Turn off',
+        researchAreaTooltipOne: 'Click an area to view others',
+        researchAreaTooltipTwo: 'with the same interest.'
+    };
+    var i18nStringsUriRdf = {
+        shareProfileUri: 'share the URI for this profile',
+        viewRDFProfile: 'view profile in RDF format',
+        closeString: 'close'
+    };
+</script> 
+  <script type="text/javascript">
+    i18n_confirmDelete = "Are you sure you want to delete this photo?";
+</script> 
+  
+  <!-- #wrapper-content --> 
+  
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22visualization%22%2C%22version%22%3A%221%22%2C%22packages%22%3A%5B%22imagesparkline%22%5D%7D%5D%7D"></script> 
+  <script type="text/javascript" src="/vivo/js/visualization/visualization-helper-functions.js?version=1580"></script> 
+  <script type="text/javascript" src="/vivo/js/visualization/sparkline.js?version=1580"></script> 
+  <script type="text/javascript" src="/vivo/js/individual/propertyGroupControls.js?version=1580"></script> 
+  <script type="text/javascript" src="/vivo/js/individual/individualUtils.js?version=1580"></script> 
+  <script type="text/javascript" src="/vivo/js/individual/individualQtipBubble.js?version=1580"></script> 
+  <script type="text/javascript" src="/vivo/js/individual/individualUriRdf.js?version=d588"></script> 
+  <script type="text/javascript" src="/vivo/js/individual/moreLessController.js?version=d588"></script> 
+  <script type="text/javascript" src="/vivo/js/jquery-ui/js/jquery-ui-1.12.1.min.js?version=d588"></script> 
+  <script type="text/javascript" src="/vivo/js/imageUpload/imageUploadUtils.js?version=d588"></script> 
+  <script async="" type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> 
+  <script async="" type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script> 
+</header>

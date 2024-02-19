@@ -1,0 +1,17 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.title-holder {
+  text-align: left;
+}
+.title {
+  font-family: 'Lato', sans-serif;
+}
+.font {
+  font-size: 18px;
+}
+
+#wordcloud {
+    width: 800px;
+    height: 400px;
+}

@@ -1,0 +1,283 @@
+/* $This file is distributed under the terms of the license in LICENSE$ */
+
+@charset "UTF-8";
+/* CSS Document */
+
+/* HEADER */
+
+#branding {
+    width: 100%;
+	min-width: 1024px;
+	background: #210d41;
+	height: 93px;
+	padding: 0.85rem 0 0.1rem !important;
+
+}
+.logo-brcris {
+	width: 103px;
+	height: 75px;
+	margin-left: 3.75em;
+	margin-right: 1.75rem;
+	margin-top: 0.2em;
+}
+.logo-ibict {
+	width: 132px;
+	height: 50px;
+	margin-left: 1.2rem;
+	margin-top: 1.55em;
+}
+
+
+.logo-home {
+	
+	clear: both;
+	display: block;
+	margin: 1.5em auto;
+}
+
+
+
+.Dropdown_dropbtn__m1zR1 {
+    border: none;
+    cursor: pointer
+}
+
+.Dropdown_dropdown__kXFHw {
+    position: relative;
+    display: inline-block
+}
+
+.Dropdown_dropdownContent__5gxWP {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+    z-index: 1;
+    border-radius: 4px
+}
+
+.Dropdown_dropdownContent__5gxWP a {
+    color: #000!important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 4px
+}
+
+.Dropdown_dropdownContent__5gxWP a:hover {
+    background-color: #eee
+}
+
+.Dropdown_dropdown__kXFHw:hover .Dropdown_dropdownContent__5gxWP {
+    display: block
+}
+
+.Dropdown_dropdown__kXFHw:hover .Dropdown_dropbtn__m1zR1 {
+    background-color: #3e8e41
+}
+
+.Dropdown_flexCenter__4gAzT {
+    display: flex;
+    color: #fff;
+    align-items: center
+}
+
+
+.Dropdown_flexCenter__4gAzT svg {
+    vertical-align: middle;
+}
+
+.logos {
+	
+	display: flex;
+    float: left;
+	height: 95px;
+}
+.btn-picti {
+    background: #f9943b;
+}
+
+.btn-api, .btn-lorem {
+    background: #e61f93;
+}
+
+/* TABS */
+
+li.nonSelectedGroupTab, li.selectedGroupTab, .property-group   {
+	    
+	border: 1px solid #e61f93;
+	
+}
+li.nonSelectedGroupTab {
+	    
+	background: #660B6E;
+	border-bottom: 1px solid #660B6E;
+	color: #fff;
+	
+}
+li.selectedGroupTab   {
+	
+	border-bottom-color: #210d41;
+	color: #fff;
+	background: #210d41;
+}
+li.groupTabSpacer {
+	
+	border-bottom: 1px solid #e61f93;
+}
+
+#overview, section.property-group, section.property-group h2 {
+    background: #FFF!important;
+	color: #513872!important;
+}
+
+article.property h3 {
+	background: #660B6E;
+	color: #fff;
+}
+
+article.property ul.property-list li {
+}
+
+.address-line:nth-last-child(1) {
+	float: none !important;
+	padding-right: 0 !important;
+
+
+}
+
+article.property ul.property-list {
+    background: #fff;
+    padding-bottom: 0.5em;
+    list-style-type: none;
+}
+
+/* menu */
+
+
+
+#individual-intro.person #individual-info {
+    width: 100%;
+}
+
+#researchAreaIcon {
+	vertical-align: middle; 	margin-left: 0.5em;
+}
+
+/* dashboards */
+
+
+.outter-dash {
+	width: 930px;
+}
+.bloco-dash, .bloco-team {
+	display: block;
+	float: left;
+	margin-right:3%;
+	width: 30%;
+	text-align: center;
+	min-height: 315px;
+	border-radius: 10px 10px 10px 10px;
+	border: 1px solid #660B6E;
+	margin-bottom: 1rem;
+	
+}
+.bloco-dash {
+	min-height: 350px;	
+}
+.bloco-dash h4 {
+	
+	font-weight: bold;
+}
+.bloco-dash p {
+	
+	text-align: justify;
+	margin: 1.5rem;
+}
+
+.bloco-dash img {
+	min-height: 95px	
+}
+
+
+.bloco-team {
+    border: 1px solid #EBDEF0;
+    padding: 0.5em;
+    width: 17%;
+    margin-right: 0.5%;
+}
+.bloco-team h4  {
+	color: #6729CC;
+	font-weight: bold;
+	
+}
+.bloco-team img  {
+	max-width: 100%;
+}
+
+.bloco-team a, .bloco-team a:link, .bloco-team a:hover {
+	
+	color: #FDF7FF;
+	text-decoration: none;
+	font-weight: bold;
+	
+}
+.bloco-team p {
+	
+	margin: auto;
+    border: 1px solid #61468C;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    width: 75%;
+	background: #6E2BD9;
+}
+/* Sobre */
+
+.property-group p {
+	
+	padding: 0 20px 5px 0;
+	background: #fff;
+	margin-bottom: 0;
+;
+}
+
+.text-about {
+	
+	padding: 10px 10px 20px !important;
+}
+
+/* rodape */
+.rodape {
+	width: 100%;
+	text-align: center;
+}
+.logo-rodape {
+	margin: 4rem auto 1rem;
+}
+.footer-adress {
+	text-align: center;
+	line-height: normal;
+	padding-bottom: 2rem;
+}
+
+.social-media-icons {
+    height: 48px;
+    display: flex;
+	clear: both;
+    align-items: center;
+    justify-content: center;
+    background-color: #210d41;
+    gap: 48px;
+	margin-top: 20px;
+	
+}
+.social-media-icons a {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+ul.propertyTabsList  {
+  	margin-left: 0;
+}

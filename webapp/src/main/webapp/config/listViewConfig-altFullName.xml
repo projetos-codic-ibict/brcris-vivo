@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in LICENSE$ -->
+
+<!-- See guidelines at https://wiki.lyrasis.org/display/VIVODOC112x/Custom+List+View+Configurations -->
+
+<list-view-config>
+    <query-select>
+	PREFIX vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt;    
+	PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+        SELECT DISTINCT ?vcard ?formattedName (STRLEN(?formattedName) as ?nameLen)
+	    
+	 WHERE {
+	    ?subject ?property ?vcard .
+	    ?vcard vcard:hasName ?name .
+	    OPTIONAL {
+	    <precise-subquery>?subject ?property ?vcard .
+	    ?vcard vcard:hasName ?name .</precise-subquery>
+	    ?name vcard:formattedName ?formattedName .
+	   } 	
+	}
+	ORDER BY DESC(?nameLen)
+        LIMIT 1
+    </query-select>
+
+    <template>propStatement-altFullName.ftl</template>
+    <postprocessor>edu.cornell.mannlib.vitro.webapp.web.templatemodels.individual.MaintainDuplicatesObjectPropertyDataPostProcessor</postprocessor>
+</list-view-config>

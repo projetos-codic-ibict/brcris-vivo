@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in LICENSE$ -->
+
+<!-- See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    <query-select>
+        PREFIX foaf:  &lt;http://xmlns.com/foaf/0.1/&gt;
+        PREFIX core:  &lt;http://vivoweb.org/ontology/core#&gt;
+        PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+        SELECT DISTINCT  ?advisingRel
+            ?advisor
+            ?advisorLabel
+
+        WHERE
+        {
+            ?subject ?property ?advisingRel .
+            ?advisingRel a core:AdvisingRelationship .
+            OPTIONAL {
+                <precise-subquery>?subject ?property ?advisingRel .
+                ?advisingRel a core:AdvisingRelationship .</precise-subquery>
+                ?advisingRel core:relates ?advisor .
+                ?advisor a foaf:Person .
+                ?advisor rdfs:label ?advisorLabel .
+            }
+        } 
+    </query-select>
+
+    <template>propStatement-advisedDocIn.ftl</template>
+</list-view-config>

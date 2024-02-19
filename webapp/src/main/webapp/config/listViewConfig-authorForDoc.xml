@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- $This file is distributed under the terms of the license in LICENSE$ -->
+
+<!-- See guidelines at https://wiki.duraspace.org/x/eYXVAw -->
+
+<list-view-config>
+    <query-select>
+        PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+        PREFIX core:  &lt;http://vivoweb.org/ontology/core#&gt;
+        PREFIX foaf:  &lt;http://xmlns.com/foaf/0.1/&gt;
+        PREFIX fn:   &lt;http://www.w3.org/2005/xpath-functions#&gt;
+
+        SELECT DISTINCT ?authorship
+            ?author ?authorName
+
+        WHERE
+        {
+            ?subject ?property ?authorship .
+            ?authorship a core:Authorship .
+            OPTIONAL {
+                <precise-subquery>?subject ?property ?authorship .
+                ?authorship a core:Authorship .</precise-subquery>
+                ?authorship core:rank ?rank .
+            }
+            OPTIONAL {
+                <precise-subquery>?subject ?property ?authorship .
+                ?authorship a core:Authorship .</precise-subquery>
+                ?authorship core:relates ?author .
+                ?author a foaf:Person .
+                ?author rdfs:label ?authorName .
+            }
+        } ORDER BY ?rank (fn:lower-case(?authorName))
+    </query-select>
+
+    <template>propStatement-authorForDoc.ftl</template>
+</list-view-config>

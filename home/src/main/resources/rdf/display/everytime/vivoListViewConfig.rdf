@@ -130,4 +130,17 @@
         <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-doi.xml</display:listViewConfigFile>
     </rdf:Description>
 
+    <!--
+     ******************************************************************
+     BrCris properties custom list views
+     ******************************************************************
+    -->
+
+    <rdf:Description rdf:about="https://brcris.ibict.br/ontology/resultOfAdvising">
+        <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-advisedDocIn.xml</display:listViewConfigFile>
+</rdf:Description>
+
+    <rdf:Description rdf:about="https://brcris.ibict.br/ontology/lattesIdentifier">
+        <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-lattesId.xml</display:listViewConfigFile>
+    </rdf:Description>
 </rdf:RDF>
