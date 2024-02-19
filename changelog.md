@@ -22,4 +22,3 @@ webapp/src/main/webapp/i18n/all_en_US.properties
 webapp/src/main/webapp/i18n/all_pt_BR.properties
 webapp/src/main/webapp/i18n/vivo_all_en_US.properties
 webapp/src/main/webapp/i18n/vivo_all_pt_BR.properties
-
