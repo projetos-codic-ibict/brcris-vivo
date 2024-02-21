@@ -75,7 +75,8 @@
     </rdf:Description>
 
    <rdf:Description rdf:about="http://vivoweb.org/ontology/core#publicationVenueFor">
-        <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-publicationVenueFor.xml</display:listViewConfigFile>
+	 <!-- <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-publicationVenueFor.xml</display:listViewConfigFile>-->
+	 <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-publicationVenueForDoc.xml</display:listViewConfigFile>
     </rdf:Description>
 
     <rdf:Description rdf:about="http://vivoweb.org/ontology/core#orcidId">
