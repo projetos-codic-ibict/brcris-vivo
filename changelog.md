@@ -1,33 +1,33 @@
-## Custom BrCris VIVO Instalation
+# Custom BrCris VIVO Instalation
 
-### 22/02/2024 - Fixing publication count sparkline visualization in Person profile page
+## 22/02/2024 - Fixing publication count sparkline visualization in Person profile page
 
-#### Files modified
+### *Files modified*
 api/src/main/java/edu/cornell/mannlib/vitro/webapp/visualization/personpubcount/PersonPublicationCountQueryRunner.java
 api/src/main/java/edu/cornell/mannlib/vitro/webapp/visualization/utilities/VisualizationCaches.java
 
-### 21/02/2024 - Listing only instances of bibo:Document as publications for Journal
+## 21/02/2024 - Listing only instances of bibo:Document as publications for Journal
 
-#### Files modified
+### *Files modified*
 home/src/main/resources/rdf/display/everytime/vivoListViewConfig.rdf
 
-#### Files added
+### *Files added*
 webapp/src/main/webapp/config/listViewConfig-publicationVenueForDoc.xml
 webapp/src/main/webapp/templates/freemarker/body/partials/individual/propStatement-publicationVenueForDoc.ftl
 
-### 20/02/2024 - Fixing co-author network visualization, using only bibo:Document instances
+## 20/02/2024 - Fixing co-author network visualization, using only bibo:Document instances
 
-#### File modified
+### *File modified*
 api/src/main/java/edu/cornell/mannlib/vitro/webapp/visualization/coauthorship/CoAuthorshipQueryRunner.java
 
-### 19/02/2024 - Current BrCris customizations, including Solr fixes
+## 19/02/2024 - Current BrCris customizations, including Solr fixes
 
-#### Files modified
+### *Files modified*
 home/src/main/resources/rdf/display/everytime/vivoListViewConfig.rdf  
 webapp/src/main/webapp/WEB-INF/resources/startup_listeners.txt  
 webapp/src/main/webapp/favicon.ico
 
-#### Files added
+### *Files added*
 webapp/src/main/webapp/themes/brcris/ (*complete brcris theme, constantly updated*)  
 webapp/src/main/webapp/config/listViewConfig-advisedDocIn.xml  
 webapp/src/main/webapp/config/listViewConfig-altFullName.xml  
