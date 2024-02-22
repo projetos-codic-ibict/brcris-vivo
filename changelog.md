@@ -1,5 +1,11 @@
 ## Custom BrCris VIVO Instalation
 
+### 22/02/2024 - Fixing publication count sparkline visualization in Person profile page
+
+#### Files modified
+api/src/main/java/edu/cornell/mannlib/vitro/webapp/visualization/personpubcount/PersonPublicationCountQueryRunner.java
+api/src/main/java/edu/cornell/mannlib/vitro/webapp/visualization/utilities/VisualizationCaches.java
+
 ### 21/02/2024 - Listing only instances of bibo:Document as publications for Journal
 
 #### Files modified

@@ -631,8 +631,9 @@ final public class VisualizationCaches {
                                     "  ?person core:relatedBy ?authorship .\n" +
                                     "  ?authorship a core:Authorship .\n" +
                                     "  ?authorship core:relates ?document .\n" +
-                                    "  ?document a <http://purl.obolibrary.org/obo/IAO_0000030> .\n" +
-                                    "}\n";
+                                    //"  ?document a <http://purl.obolibrary.org/obo/IAO_0000030> .\n" +
+                                    "  ?document a <http://purl.org/ontology/bibo/Document> .\n" +
+				    "}\n";
 
                             final PersonPublicationMaps map = new PersonPublicationMaps();
 

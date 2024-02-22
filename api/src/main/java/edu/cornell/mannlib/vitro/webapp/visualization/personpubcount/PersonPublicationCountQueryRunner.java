@@ -65,7 +65,7 @@ public class PersonPublicationCountQueryRunner implements QueryRunner<Set<Activi
 	}
 
 	private String getSparqlConstruct(String queryURI) {
-		String sparqlQuery = QueryConstants.getSparqlPrefixQuery()
+		/*String sparqlQuery = QueryConstants.getSparqlPrefixQuery()
 				+ "CONSTRUCT \n"
 				+ "{\n"
 				+ "    <" + queryURI + "> rdfs:label ?authorName .\n"
@@ -84,6 +84,35 @@ public class PersonPublicationCountQueryRunner implements QueryRunner<Set<Activi
 				+ "	   ?document rdf:type bibo:Document ; \n"
 				+ "              rdfs:label ?documentLabel ;\n"
 				+ "              vitro:mostSpecificType ?publicationType .\n"
+				+ "    } UNION {\n"
+				+ "    <" + queryURI + "> rdf:type foaf:Person ;\n"
+				+ "                       core:relatedBy ?authorshipNode .  \n"
+				+ "    ?authorshipNode rdf:type core:Authorship ;"
+				+ "                    core:relates ?document . \n"
+				+ "	   ?document rdf:type bibo:Document . \n"
+				+ "    ?document core:dateTimeValue ?dateTimeValue . \n"
+				+ "    ?dateTimeValue core:dateTime ?publicationDate .\n"
+				+ "    }\n"
+				+ "}\n";*/
+        
+        String sparqlQuery = QueryConstants.getSparqlPrefixQuery()
+				+ "CONSTRUCT \n"
+				+ "{\n"
+				+ "    <" + queryURI + "> rdfs:label ?authorName .\n"
+				+ "    <" + queryURI + "> core:authorOf ?document .\n"
+				+ "    ?document rdf:type ?publicationType .\n"
+				+ "    ?document core:publicationDate ?publicationDate .\n"
+				+ "}\n"
+				+ "WHERE"
+				+ "{\n"
+				+ "    {\n"
+				+ "    <" + queryURI + "> rdf:type foaf:Person ;\n"
+				+ "                       rdfs:label ?authorName ;  \n"
+				+ "                       core:relatedBy ?authorshipNode .  \n"
+				+ "    ?authorshipNode rdf:type core:Authorship ; \n"
+				+ "                    core:relates ?document . \n"
+				+ "	   ?document rdf:type bibo:Document ; \n"
+				+ "              rdfs:label ?documentLabel .\n"
 				+ "    } UNION {\n"
 				+ "    <" + queryURI + "> rdf:type foaf:Person ;\n"
 				+ "                       core:relatedBy ?authorshipNode .  \n"
