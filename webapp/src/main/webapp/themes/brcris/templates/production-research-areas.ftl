@@ -7,7 +7,8 @@
 <#if areas?has_content>
     ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/themes/brcris/css/researchareas/style.css"/>')}
 
-	<#assign dataString = "[ ">
+	<#assign pubsLabel = "${i18n().res_area_pubs}">
+  <#assign dataString = "[ ">
 	
     <section id="pageList">
         <#list areas as firstRow>
@@ -38,7 +39,8 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script>
 	
-	var dataString = "${dataString?json_string}";
+	var pubsLabel = "${pubsLabel?js_string}";
+  var dataString = "${dataString?json_string}";
 	var data = JSON.parse(dataString);
 	
 	// filter data to remove duplicates rows (due to multiple author names)
@@ -107,7 +109,7 @@
  
 		var percent = Math.round(1000 * d.data.count / total) / 10;
 		tooltip.select('.label').html(d.data.label);         
-		tooltip.select('.count').html(d.data.count + ' Publications');           
+		tooltip.select('.count').html(d.data.count + ' ' + pubsLabel);           
 		tooltip.style('display', 'block');                   
 	});                                                           
 
@@ -121,14 +123,15 @@
   });
 
 	// define legend
+  var maxAreas = Math.min(20, color.domain().length)
 	var legend = svg.selectAll('.legend')
-		.data(color.domain())
+		.data(color.domain().slice(0, maxAreas))
 		.enter()
 		.append('g')
 		.attr('class', 'legend')
 		.attr('transform', function(d, i) {                   
 			var height = legendRectSize + legendSpacing;     
-			var offset =  height * color.domain().length / 2;
+			var offset =  height * maxAreas / 2;
 			var horz = 20 * legendRectSize; 
 			var vert = i * height - offset;              
 			return 'translate(' + horz + ',' + vert + ')';      

@@ -154,7 +154,7 @@
 				.attr("stroke", "black")
 				.attr("stroke-width", 1);
 			selectedYear = i;
-			tip.show(d, types[types.length - 1 - j]);
+			tip.show(d, typeLabels[typeLabels.length - 1 - j]);
 		  })
 		.on("mouseout", function (d) {   
 				d3.select(this).attr("stroke", "none").attr("stroke-width", 0);
@@ -179,10 +179,10 @@
 	var legend = svg.append("g")
 		.attr("transform", "translate(-1270, -50)")
 		.selectAll(".legend")
-		.data(types.reverse())
+		.data(typeLabels.reverse())
 		.enter().append("g")
 		.attr("class", "legend")
-		.attr("transform", function(d, i) { return "translate(" + i * 120 + ",0)"; });
+		.attr("transform", function(d, i) { return "translate(" + i * 180 + ",0)"; });
 
 
 	legend.append("rect")

@@ -7,7 +7,10 @@
 <#if advisees?has_content>
     ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/themes/brcris/css/advising/style.css"/>')}
 
-	<#assign nodesString = "{\"nodes\": [ ">
+	<#assign advLabel = "${i18n().advisor_role}">
+	<#assign docLabel = "${i18n().doctoral_role}">
+	<#assign masterLabel = "${i18n().master_role}">
+  <#assign nodesString = "{\"nodes\": [ ">
 	
     <section id="pageList">
         <#list advisees as firstRow>
@@ -47,7 +50,11 @@
 	<script>
 	
 var urlPrefix = "${urlPrefix?js_string}";
-var levels = new Map([[1, "Advisor"], [2, "Doctoral thesis"], [3, "Master thesis"]]);
+
+var advLabel = "${advLabel?js_string}";
+var docLabel = "${docLabel?js_string}";	
+var masterLabel = "${masterLabel?js_string}";
+var levels = new Map([[1, advLabel], [2, docLabel], [3, masterLabel]]);
 
 var width = 950;
 var height = 850;
@@ -65,12 +72,12 @@ var svg = d3.select('#graph')
 
 var color = d3.scaleOrdinal().domain(Array.from(levels.keys())).range(d3.schemeCategory10);
 
-svg.append("circle").attr("cx",805).attr("cy",50).attr("r", 8).attr("fill", color(1))
-svg.append("circle").attr("cx",805).attr("cy",70).attr("r", 8).attr("fill", color(2))
-svg.append("circle").attr("cx",805).attr("cy",90).attr("r", 8).attr("fill", color(3))
-svg.append("text").attr("x", 820).attr("y", 53).text(levels.get(1)).attr("alignment-baseline","middle").style("cursor", "default")
-svg.append("text").attr("x", 820).attr("y", 74).text(levels.get(2)).attr("alignment-baseline","middle").style("cursor", "default")
-svg.append("text").attr("x", 820).attr("y", 95).text(levels.get(3)).attr("alignment-baseline","middle").style("cursor", "default")
+svg.append("circle").attr("cx",800).attr("cy",50).attr("r", 8).attr("fill", color(1))
+svg.append("circle").attr("cx",800).attr("cy",70).attr("r", 8).attr("fill", color(2))
+svg.append("circle").attr("cx",800).attr("cy",90).attr("r", 8).attr("fill", color(3))
+svg.append("text").attr("x", 815).attr("y", 50).text(levels.get(1)).attr("alignment-baseline","middle").style("cursor", "default")
+svg.append("text").attr("x", 815).attr("y", 70).text(levels.get(2)).attr("alignment-baseline","middle").style("cursor", "default")
+svg.append("text").attr("x", 815).attr("y", 92).text(levels.get(3)).attr("alignment-baseline","middle").style("cursor", "default")
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))

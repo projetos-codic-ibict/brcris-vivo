@@ -1,5 +1,12 @@
 # Custom BrCris VIVO Instalation
 
+## 23/02/2024 - Adding translation for legends and tooltips in custom visualizations
+
+### *Files modified*
+webapp/src/main/webapp/themes/brcris/templates/advisor-network-visualization.ftl
+webapp/src/main/webapp/themes/brcris/templates/production-full-stats.ftl
+webapp/src/main/webapp/themes/brcris/templates/production-research-areas.ftl
+
 ## 22/02/2024 - Fixing publication count sparkline visualization in Person profile page
 
 ### *Files modified*
