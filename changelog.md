@@ -1,5 +1,10 @@
 # Custom BrCris VIVO Instalation
 
+## 01/03/2024 - Inserting a line break between overview entries in the Person profile page
+
+### *Files modified*
+webapp/src/main/webapp/themes/brcris/templates/individual-overview.ftl
+
 ## 23/02/2024 - Adding translation for legends and tooltips in custom visualizations
 
 ### *Files modified*
@@ -7,7 +12,7 @@ webapp/src/main/webapp/themes/brcris/templates/advisor-network-visualization.ftl
 webapp/src/main/webapp/themes/brcris/templates/production-full-stats.ftl
 webapp/src/main/webapp/themes/brcris/templates/production-research-areas.ftl
 
-## 22/02/2024 - Fixing publication count sparkline visualization in Person profile page
+## 22/02/2024 - Fixing publication count sparkline visualization in the Person profile page
 
 ### *Files modified*
 api/src/main/java/edu/cornell/mannlib/vitro/webapp/visualization/personpubcount/PersonPublicationCountQueryRunner.java
