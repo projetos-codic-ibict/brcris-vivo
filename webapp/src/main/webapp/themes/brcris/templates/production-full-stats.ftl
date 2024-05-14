@@ -7,7 +7,7 @@
 <#if stats?has_content>
 	${stylesheets.add('<link rel="stylesheet" href="${urls.base}/themes/brcris/css/prodstats/style.css"/>')}
 
-    <#assign doctTypeLabel = "${i18n().pub_type_doctoral}">
+        <#assign doctTypeLabel = "${i18n().pub_type_doctoral}">
 	<#assign masterTypeLabel = "${i18n().pub_type_master}">
 	<#assign journalTypeLabel = "${i18n().pub_type_journal}">
 	<#assign confTypeLabel = "${i18n().pub_type_conf}">
@@ -50,7 +50,7 @@
 	var masterTypeLabel = "${masterTypeLabel?js_string}";
 	var journalTypeLabel = "${journalTypeLabel?js_string}";
 	var confTypeLabel = "${confTypeLabel?js_string}";
-	var typeLabels = [doctTypeLabel, masterTypeLabel, journalTypeLabel, confTypeLabel];
+	var typeLabels = [confTypeLabel, journalTypeLabel, masterTypeLabel, doctTypeLabel];
 
 	var types = ["conference proceedings", "journal article", "master thesis", "doctoral thesis"];
 	var dataString = "${dataString?json_string}";
@@ -154,7 +154,7 @@
 				.attr("stroke", "black")
 				.attr("stroke-width", 1);
 			selectedYear = i;
-			tip.show(d, types[types.length - 1 - j]);
+			tip.show(d, typeLabels[typeLabels.length - 1 - j]);
 		  })
 		.on("mouseout", function (d) {   
 				d3.select(this).attr("stroke", "none").attr("stroke-width", 0);
