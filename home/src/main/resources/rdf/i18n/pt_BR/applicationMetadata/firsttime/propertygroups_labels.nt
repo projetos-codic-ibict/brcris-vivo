@@ -14,3 +14,4 @@
 <http://vivoweb.org/ontology#vitroPropertyGroupresearch> <http://www.w3.org/2000/01/rdf-schema#label> "pesquisas"@pt-BR .
 <http://vivoweb.org/ontology#vitroPropertyGroupaddress> <http://www.w3.org/2000/01/rdf-schema#label> "contato"@pt-BR .
 <http://vivoweb.org/ontology#vitroPropertyGroupmapping> <http://www.w3.org/2000/01/rdf-schema#label> "mapeamento"@pt-BR .
+<http://vivoweb.org/ontology#vitroPropertyGroupmetrics> <http://www.w3.org/2000/01/rdf-schema#label> "métricas"@pt-BR .
