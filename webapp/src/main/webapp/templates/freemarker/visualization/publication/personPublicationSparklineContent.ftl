@@ -132,9 +132,9 @@
                                     var sparksText = "";
                                     if ( !onlyUnknownYearPublications ) {
 
-                                        $('#${sparklineContainerID} td.sparkline_number').text(totalPubs + " ${i18n().last_ten_full?js_string}").attr("class", "grey-text");
+                                        $('#${sparklineContainerID} td.sparkline_number').text(totalPubs + " ${i18n().last_ten_full_years?js_string}").attr("class", "grey-text");
 
-                                        sparksText += "${i18n().years?js_string}";
+                                        //sparksText += "${i18n().years?js_string}";
 
                                         if (totalPubs !== totalPublicationCount) {
                                         //sparksText += ' (' + totalPublicationCount + ' ${i18n().total})' ;

@@ -40,8 +40,9 @@
 
                 var data = new google.visualization.DataTable();
                 data.addColumn('number', 'Year');
-                data.addColumn('number', 'Unique co-authors');
-                data.addRows(${sparklineVO.yearToEntityCountDataTable?size});
+                //data.addColumn('number', 'Unique co-authors');
+                data.addColumn('number', '${i18n().unique_coauthors?js_string}');
+		data.addRows(${sparklineVO.yearToEntityCountDataTable?size});
 
                 var knownYearPublicationCounts = 0;
 
