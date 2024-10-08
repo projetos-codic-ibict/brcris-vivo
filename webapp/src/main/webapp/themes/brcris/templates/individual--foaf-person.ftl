@@ -86,8 +86,11 @@
             <#include "individual-positions.ftl">
         </header>
 
-        <!-- Overview -->
+        <!-- metaTag keywords -->
+        <#include "meta-tag-keyword.ftl">
+                <!-- Overview -->
         <#include "individual-overview.ftl">
+
 
         <!-- Research Areas -->
         <#include "individual-researchAreas.ftl">
