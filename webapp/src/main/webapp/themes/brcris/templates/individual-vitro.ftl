@@ -1,5 +1,6 @@
 <#-- $This file is distributed under the terms of the license in LICENSE$ -->
 <#import "lib-microformats.ftl" as mf>
+<#import "lib-meta-tags.ftl" as lmt>
 
 <#--Number of labels present-->
 <#if !labelCount??>
@@ -13,6 +14,7 @@
 <#if !languageCount??>
 	<#assign languageCount = 1>
 </#if>
+
 
 <#-- Default individual profile page template -->
 <#--@dumpAll /-->
@@ -43,9 +45,11 @@
 
         <header>
             <#if relatedSubject??>
+                <@lmt.addCitationMetaTag uri="http://vivoweb.org/ontology/core#Title" content="${relatedSubject.name}" />
                 <h2>${relatedSubject.relatingPredicateDomainPublic} for ${relatedSubject.name}</h2>
                 <p><a href="${relatedSubject.url}" title="${i18n().return_to(relatedSubject.name)}">&larr; ${i18n().return_to(relatedSubject.name)}</a></p>
             <#else>
+                <@lmt.addCitationMetaTag uri="http://vivoweb.org/ontology/core#Title" content="${individual.name}" />
                 <h1 class="fn" itemprop="name"> 
                     <#-- Label -->
                     <@p.label individual editable labelCount localesCount languageCount/>

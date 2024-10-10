@@ -3,11 +3,14 @@
 <#macro addCitationMetaTag uri="" content="">
     <#if metaTags?? && uri?? && content??>
         <#switch uri>
+            <#case "http://vivoweb.org/ontology/core#Title">
+                ${metaTags.add("<meta tag=\"citation_title\" content=\"" + content + "\" />")}
+                <#break>
             <#case "http://vivoweb.org/ontology/core#Authorship">
                 ${metaTags.add("<meta tag=\"citation_author\" content=\"" + content + "\" />")}
                 <#break>
             <#case "http://vivoweb.org/ontology/core#dateTimeValue">
-                ${metaTags.add("<meta tag=\"citation_date\" content=\"" + content + "\" />")}
+                ${metaTags.add("<meta tag=\"citation_publication_date\" content=\"" + content + "\" />")}
                 <#break>
             <#case "http://purl.org/ontology/bibo/Journal">
                 ${metaTags.add("<meta tag=\"citation_journal_title\" content=\"" + content + "\" />")}
@@ -42,6 +45,7 @@
         </#switch>
     </#if>
 </#macro>
+
 
 http://purl.org/ontology/bibo/volume
 http://purl.org/ontology/bibo/issue
