@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.vivoweb</groupId>
     <artifactId>vivo-installer</artifactId>
-    <version>1.14.1-SNAPSHOT</version>
+    <version>1.14.1</version>
     <packaging>pom</packaging>
     <name>VIVO Installer</name>
 
@@ -127,7 +127,9 @@
         <profile>
             <id>skip-install</id>
             <activation>
-                <property><name>!vivo-dir</name></property>
+                <property>
+                    <name>!vivo-dir</name>
+                </property>
             </activation>
             <build>
                 <plugins>
@@ -175,7 +177,7 @@
                         <executions>
                             <execution>
                                 <id>test</id>
-                                <phase/>
+                                <phase />
                             </execution>
                         </executions>
                     </plugin>
@@ -184,7 +186,7 @@
                         <executions>
                             <execution>
                                 <id>default-war</id>
-                                <phase/>
+                                <phase />
                             </execution>
                         </executions>
                     </plugin>
@@ -194,7 +196,9 @@
         <profile>
             <id>install</id>
             <activation>
-                <property><name>vivo-dir</name></property>
+                <property>
+                    <name>vivo-dir</name>
+                </property>
             </activation>
             <build>
                 <plugins>
