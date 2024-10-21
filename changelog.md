@@ -55,3 +55,16 @@ webapp/src/main/webapp/i18n/all_pt_BR.properties
 webapp/src/main/webapp/i18n/vivo_all_en_US.properties  
 webapp/src/main/webapp/i18n/vivo_all_pt_BR.properties
 
+## 10/10/2024 - Addition and Update Made
+
+- Added the `citation_title` meta tag (lib-meta-tags.ftl)
+- Updated the `citation_date` meta tag to `citation_publication_date` (lib-meta-tags.ftl)
+
+## 09/10/2024 - Addition Made
+
+- Added the `citation_author` meta tag for the custom BRCris template (propStatement-authorForDoc.ftl)
+
+## 08/10/2024 - Additions Made
+
+- Added the `keywords` meta tag (meta-tag-keyword.ftl)
+- Added the `description` meta tag (individual-overview.ftl)
