@@ -1,9 +1,9 @@
 version: '3.2'
 
 services:
-
   solr:
     image: vivoweb/vivo-solr:latest
+    container_name: solr
     environment:
       - RESET_CORE=${RESET_CORE}
       - VERBOSE=${VERBOSE}
@@ -29,8 +29,11 @@ services:
       - 8080:8080
     volumes:
       - ${LOCAL_VIVO_HOME}:/usr/local/vivo/home
+    depends_on:
+      - solr
     networks:
       - vivo
 
 networks:
   vivo:
+    driver: bridge
