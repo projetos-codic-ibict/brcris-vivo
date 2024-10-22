@@ -26,7 +26,7 @@
 	<link rel="preload" href="${urls.theme}/css/charts.css" as="style">
 	<link rel="stylesheet" href="${urls.theme}/css/charts.css" as="style">		
 	
-	<link rel="stylesheet" href="${urls.theme}/css/custom-new.css" />	
+	<link rel="stylesheet" href="${urls.theme}/css/brcris.css" />	
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

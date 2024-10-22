@@ -54,9 +54,10 @@
                     <#-- Label -->
                     <@p.label individual editable labelCount localesCount languageCount/>
 
+                    <span id="iconControlsVitro"><img id="uriIcon" title="${individual.uri}" class="middle" src="${urls.theme}/images/rdf-icon.png" alt="uri icon"/></span>
+                    
                     <#--  Most-specific types -->
                     <@p.mostSpecificTypes individual />
-                    <span id="iconControlsVitro"><img id="uriIcon" title="${individual.uri}" class="middle" src="${urls.theme}/images/rdf-icon.png" alt="uri icon"/></span>
                 </h1>
             </#if>
         </header>

@@ -12,20 +12,6 @@
         <#assign groupNameHtmlId = p.createPropertyGroupHtmlId(groupName) >
         <#assign verbose = (verbosePropertySwitch.currentValue)!false>
         <section id="${groupNameHtmlId?replace("/","-")}" class="property-group" role="region">
-        <nav id="scroller" class="scroll-up hidden" role="navigation">
-            <a href="#branding" title="${i18n().scroll_to_menus}" >
-                <img src="${urls.images}/individual/scroll-up.gif" alt="${i18n().scroll_to_menus}" />
-            </a>
-        </nav>
-
-        <#-- Display the group heading -->
-        <#if groupName?has_content>
-		    <#--the function replaces spaces in the name with underscores, also called for the property group menu-->
-    	    <#assign groupNameHtmlId = p.createPropertyGroupHtmlId(groupName) >
-            <h2 id="${groupNameHtmlId?replace("/","-")}" pgroup="tabs" class="hidden">${p.capitalizeGroupName(groupName)}</h2>
-        <#else>
-            <h2 id="properties" pgroup="tabs" class="hidden">${i18n().properties_capitalized}</h2>
-        </#if>
         <div id="${groupNameHtmlId?replace("/","-")}Group" >
             <#-- List the properties in the group   -->
             <#include "individual-properties.ftl">
