@@ -42,7 +42,7 @@
         </#if>
         <#-- List the statements for each property -->
   <#assign limit = property.getDisplayLimit()!5 />
-  <#if limit == -1 || limit == 0 >
+  <#if limit < 5 >
     <#assign limit = 5 />
   </#if>
         <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
