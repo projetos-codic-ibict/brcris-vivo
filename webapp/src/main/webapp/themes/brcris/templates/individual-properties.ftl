@@ -1,5 +1,4 @@
 <#-- $This file is distributed under the terms of the license in LICENSE$ -->
-<link rel="stylesheet" href="/vivo/themes/brcris/css/brcris.css">
 <#-- Template for property listing on individual profile page -->
 
 <#list group.properties as property>

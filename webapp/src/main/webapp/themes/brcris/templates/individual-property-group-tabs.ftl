@@ -6,20 +6,18 @@
 <#assign subjectUri = individual.controlPanelUrl()?split("=") >
 <#assign tabCount = 1 >
 <#assign sectionCount = 1 >
-<#list propertyGroups.all as group>
-    <#if (group.properties?size > 0)>
-        <#assign groupName = group.getName(nameForOtherGroup)>
-        <#assign groupNameHtmlId = p.createPropertyGroupHtmlId(groupName) >
-        <#assign verbose = (verbosePropertySwitch.currentValue)!false>
-        <section id="${groupNameHtmlId?replace("/","-")}" class="property-group" role="region">
-        <div id="${groupNameHtmlId?replace("/","-")}Group" >
-            <#-- List the properties in the group   -->
-            <#include "individual-properties.ftl">
-        </div>
-        </section> <!-- end property-group -->
-        <#assign sectionCount = 2 >
-    </#if>
-</#list>
+<section class="property-group" role="region">
+    <#list propertyGroups.all as group>
+        <#if (group.properties?size > 0)>
+            <#assign groupName = group.getName(nameForOtherGroup)>
+            <#assign groupNameHtmlId = p.createPropertyGroupHtmlId(groupName) >
+            <#assign verbose = (verbosePropertySwitch.currentValue)!false>
+                <#-- List the properties in the group   -->
+                <#include "individual-properties.ftl">
+            <#assign sectionCount = 2 >
+        </#if>
+    </#list>
+</section> <!-- end property-group -->
 <script>
     var individualLocalName = "${individual.localName}";
 </script>
