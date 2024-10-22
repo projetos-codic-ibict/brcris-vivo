@@ -84,7 +84,8 @@ section article:nth-child(odd) {
   background-color: #fff;
 }
 
-section article.property > span {
+section article.property > span,
+.subclass > span {
   font-weight: 500;
 }
 
@@ -92,14 +93,15 @@ section article.property > span:first-letter {
   text-transform: uppercase;
 }
 
+.first-letter-upper:first-letter {
+  text-transform: uppercase !important;
+}
+
 section article.property ul.property-list {
   background: transparent;
   padding: 0;
   list-style-type: none;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
 }
 
 section article.property ul.property-list li {
@@ -108,12 +110,11 @@ section article.property ul.property-list li {
   background-color: inherit;
 }
 
-.property-list li:after {
-  content: ", ";
-}
-
-.property-list li:last-child:after {
-  content: "";
+section ol,
+section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .span-label {
@@ -123,4 +124,13 @@ section article.property ul.property-list li {
   position: relative;
   top: -0.5em;
   font-size: 90%;
+}
+
+ul#individual-hasResearchArea li,
+ul#individual-facultyMemberships li {
+  list-style: none;
+}
+
+.mainPropGroup::first-letter {
+  text-transform: uppercase;
 }
