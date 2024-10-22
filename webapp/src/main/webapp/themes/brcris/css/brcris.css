@@ -89,6 +89,10 @@ section article.property > span,
   font-weight: 500;
 }
 
+.subclass {
+  width: 100% !important;
+}
+
 section article.property > span:first-letter {
   text-transform: uppercase;
 }
@@ -108,6 +112,10 @@ section article.property ul.property-list li {
   line-height: 1.3em;
   padding: 0;
   background-color: inherit;
+}
+
+section article.property > span:after {
+  content: ": ";
 }
 
 section ol,
@@ -153,6 +161,25 @@ ul#individual-facultyMemberships li {
   padding: 0;
   float: none;
   background-color: transparent;
+}
+
+#pageEnd-noRangeClass-List,
+#pageStart-noRangeClass-List,
+#volume-noRangeClass-List {
+  display: flex;
+  gap: 8px;
+}
+
+#pageEnd-noRangeClass-List li:after,
+#pageStart-noRangeClass-List li:after,
+#volume-noRangeClass-List li:after {
+  content: ", ";
+}
+
+#pageEnd-noRangeClass-List li:last-child:after,
+#pageStart-noRangeClass-List li:last-child:after,
+#volume-noRangeClass-List li:last-child:after {
+  content: "";
 }
 
 /* CSS para telas menores que 768px(celulares e tablets pequenos) */

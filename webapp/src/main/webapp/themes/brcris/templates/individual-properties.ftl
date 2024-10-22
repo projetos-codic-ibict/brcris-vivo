@@ -15,30 +15,30 @@
             <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property />
                 <a id="managePubLink" class="manageLinks" href="${urls.base}/managePublications?subjectUri=${subjectUri[1]!}" title="${i18n().manage_publications_link}" <#if verbose>style="padding-top:10px"</#if> >
                     ${i18n().manage_publications_link}
-                </a>:
+                </a>
             </span>
         <#elseif rangeClass == "ResearcherRole" && individual.editable  >
             <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property />
                 <a id="manageGrantLink" class="manageLinks" href="${urls.base}/manageGrants?subjectUri=${subjectUri[1]!}" title="${i18n().manage_grants_and_projects_link}" <#if verbose>style="padding-top:10px"</#if> >
                     ${i18n().manage_grants_and_projects_link}
-                </a>:
+                </a>
             </span>
         <#elseif rangeClass == "Position" && individual.editable  >
             <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property />
                 <a id="managePeopleLink" class="manageLinks" href="${urls.base}/managePeople?subjectUri=${subjectUri[1]!}" title="${i18n().manage_affiliated_people}" <#if verbose>style="padding-top:10px"</#if> >
                     ${i18n().manage_affiliated_people_link}
-                </a>:
+                </a>
             </span>
         <#elseif rangeClass == "Name" && property.statements?has_content && editable >
-            <span id="${property.localName}" title="${property.publicDescription!}">${property.name}  <@p.verboseDisplay property />: </span>
+            <span id="${property.localName}" title="${property.publicDescription!}">${property.name}  <@p.verboseDisplay property /></span>
         <#elseif rangeClass == "Title" && property.statements?has_content && editable >
-            <span id="${property.localName}" title="${property.publicDescription!}">${property.name}  <@p.verboseDisplay property />: </span>
+            <span id="${property.localName}" title="${property.publicDescription!}">${property.name}  <@p.verboseDisplay property /></span>
 <#elseif rangeClass == "Authorship" && !individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
-  <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property />: </span>
+  <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /></span>
 <#elseif rangeClass == "ResearcherRole" && !individual.editable>
-  <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property />: </span>
+  <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /></span>
 <#else>
-            <span id="${property.localName}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property />: </span>
+            <span id="${property.localName}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property /></span>
         </#if>
         <#-- List the statements for each property -->
   <#assign limit = property.getDisplayLimit()!5 />
