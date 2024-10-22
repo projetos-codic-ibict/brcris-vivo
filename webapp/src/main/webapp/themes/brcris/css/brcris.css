@@ -134,3 +134,33 @@ ul#individual-facultyMemberships li {
 .mainPropGroup::first-letter {
   text-transform: uppercase;
 }
+
+#individual-intro.person {
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+#individual-intro.person #individual-info {
+  float: none;
+  width: auto;
+}
+
+#right-hand-column {
+  padding: 0;
+  float: none;
+  background-color: transparent;
+}
+
+/* CSS para telas menores que 768px(celulares e tablets pequenos) */
+@media only screen and (max-width: 768px) {
+  #individual-intro.person {
+    flex-direction: column;
+  }
+  section article.property {
+    flex-direction: column;
+  }
+}
