@@ -62,7 +62,9 @@ section.property-group {
   margin: 0 auto;
   margin-bottom: 0;
   border: none;
-  margin-bottom: 32px;
+  background: #f7f7f7;
+  padding: 16px 8px;
+  border-radius: 4px;
 }
 
 section article.property {
@@ -74,15 +76,20 @@ section article.property {
   align-items: baseline;
   gap: 8px;
   padding: 8px;
+  border-bottom: 1px solid #ccc;
 }
 
-section article:nth-child(even) {
+section article.property:last-child {
+  border-bottom: none;
+}
+
+/* section article:nth-child(even) {
   background-color: #f3f3f3;
 }
 
 section article:nth-child(odd) {
   background-color: #fff;
-}
+} */
 
 section article.property > span,
 .subclass > span {
@@ -174,6 +181,7 @@ ul#individual-facultyMemberships li {
 #brcrisIdentifier-noRangeClass-List {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 #pageEnd-noRangeClass-List li:after,
