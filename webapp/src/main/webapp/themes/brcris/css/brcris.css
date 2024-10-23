@@ -94,6 +94,7 @@ section article:nth-child(odd) {
 section article.property > span,
 .subclass > span {
   font-weight: 500;
+  max-width: 160px;
 }
 
 .subclass {
@@ -205,5 +206,9 @@ ul#individual-facultyMemberships li {
   }
   section article.property {
     flex-direction: column;
+  }
+  section article.property > span,
+  .subclass > span {
+    max-width: auto;
   }
 }
