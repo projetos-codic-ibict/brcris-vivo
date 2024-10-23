@@ -73,3 +73,4 @@ webapp/src/main/webapp/i18n/vivo_all_pt_BR.properties
 - Removing tabs from publication and author pages (files modified: webapp/src/main/webapp/themes/brcris/templates/individual-properties.ftl)
 - Change of property name tag from H3 to span (files created: webapp/src/main/webapp/themes/brcris/templates/individual-properties.ftl)
 - Adding span to label property values (files created: webapp/src/main/webapp/themes/brcris/templates/freemarker/body/partials/individual/propStatement-default.ftl)
+- Custom CSS for BrCris theme (files modified: webapp/src/main/webapp/themes/brcris/css/brcris.css)
