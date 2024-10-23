@@ -65,9 +65,11 @@ webapp/src/main/webapp/i18n/vivo_all_pt_BR.properties
 
 ## 10/2024 - New layout By Eric and Jesiel
 
-- Added the `citation_title` meta tag (files modified: lib-meta-tags.ftl)
-- Updated the `citation_date` meta tag to `citation_publication_date` (files modified: lib-meta-tags.ftl)
-- Added the `citation_author` meta tag for the custom BRCris template (files modified: propStatement-authorForDoc.ftl)
-- Added the `keywords` meta tag (files created: meta-tag-keyword.ftl, files modified: individual-overview.ftl)
+- Added the `citation_title` meta tag (files modified: webapp/src/main/webapp/templates/freemarker/lib/lib-meta-tags.ftl)
+- Updated the `citation_date` meta tag to `citation_publication_date` (files modified: webapp/src/main/webapp/templates/freemarker/lib/lib-meta-tags.ftl)
+- Added the `citation_author` meta tag for the custom BRCris template (files modified: webapp/src/main/webapp/themes/brcris/templates/propStatement-authorForDoc.ftl)
+- Added the `keywords` meta tag (files created: webapp/src/main/webapp/templates/freemarker/lib/meta-tag-keyword.ftl, files modified: webapp/src/main/webapp/themes/brcris/templates/individual-overview.ftl)
 - Added the `description` meta tag (files modified: individual-overview.ftl)
-- Removing tabs from publication and author pages (files modified: individual-property-group-tabs.ftl)
+- Removing tabs from publication and author pages (files modified: webapp/src/main/webapp/themes/brcris/templates/individual-properties.ftl)
+- Change of property name tag from H3 to span (files created: webapp/src/main/webapp/themes/brcris/templates/individual-properties.ftl)
+- Adding span to label property values (files created: webapp/src/main/webapp/themes/brcris/templates/freemarker/body/partials/individual/propStatement-default.ftl)

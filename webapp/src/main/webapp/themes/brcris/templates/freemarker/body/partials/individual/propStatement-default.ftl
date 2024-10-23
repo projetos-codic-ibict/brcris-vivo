@@ -15,7 +15,7 @@
   	<#if statement.subclass??>
 		<a href="${profileUrl(statement.uri("object"))}" title="${i18n().name}">${statement.label!statement.localName!}</a>
 	<#else>
-    	<a href="${profileUrl(statement.uri("object"))}" title="${i18n().name}">${statement.label!statement.localName!}</a> <span class="span-label">${statement.title!statement.type!}</span>
+    	<a href="${profileUrl(statement.uri("object"))}" title="${i18n().name}">${statement.label!statement.localName!}</a><span class="span-label">${statement.title!statement.type!}</span>
 	</#if>
 	<@lmt.addCitationMetaTag uri=(statement.specificObjectType) content=(statement.label!) />
 </#macro>

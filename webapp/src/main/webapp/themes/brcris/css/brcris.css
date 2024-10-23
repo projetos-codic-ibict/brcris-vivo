@@ -95,9 +95,6 @@ section article.property > span,
 .subclass > span {
   font-weight: 500;
 }
-section article.property > span {
-  width: 150px;
-}
 
 .subclass {
   width: 100% !important;
@@ -107,9 +104,8 @@ section article.property > span:first-letter {
   text-transform: uppercase;
 }
 
-.first-letter-upper:first-letter {
+.subclass > span:first-letter {
   text-transform: uppercase;
-  background-color: red;
 }
 
 section article.property ul.property-list {
