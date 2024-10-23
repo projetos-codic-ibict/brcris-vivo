@@ -18,7 +18,5 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-        with:
-          clean: false
       - run: |
           echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S sh deploy.sh

@@ -17,6 +17,9 @@ cd brcris-vivo
 echo "mvn clean package -s installer/example-settings.xml"
 mvn clean package -s installer/example-settings.xml
 
+echo "permissão para o github actions executar o git clean no próximo deploy"
+sudo chmod -R 777 .
+
 echo "sudo rm -rf /opt/tomcat/webapps/vivo-dev"
 sudo rm -rf /opt/tomcat/webapps/vivo-dev
 
