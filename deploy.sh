@@ -20,11 +20,11 @@ mvn clean package -s installer/example-settings.xml
 echo "permissão para o github actions executar o git clean no próximo deploy"
 sudo chmod -R 777 .
 
-echo "sudo rm -rf /opt/tomcat/webapps/vivo-dev"
-sudo rm -rf /opt/tomcat/webapps/vivo-dev
+echo "sudo rm -rf /opt/tomcat/webapps/vivo"
+sudo rm -rf /opt/tomcat/webapps/vivo
 
-echo "sudo cp -rf installer/webapp/target/vivo /opt/tomcat/webapps/vivo-dev"
-sudo cp -rf installer/webapp/target/vivo /opt/tomcat/webapps/vivo-dev
+echo "sudo cp -rf installer/webapp/target/vivo /opt/tomcat/webapps/vivo"
+sudo cp -rf installer/webapp/target/vivo /opt/tomcat/webapps/vivo
 
 echo "sudo systemctl restart tomcat.service"
 sudo systemctl restart tomcat.service

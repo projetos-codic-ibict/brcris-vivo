@@ -209,6 +209,6 @@ ul#individual-facultyMemberships li {
   }
   section article.property > span,
   .subclass > span {
-    max-width: auto;
+    max-width: 100%;
   }
 }
