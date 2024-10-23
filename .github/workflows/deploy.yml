@@ -4,40 +4,19 @@ on:
   push:
     branches:
       - main
+      - dev
   workflow_dispatch:
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
+  deploy-dev:
+    runs-on: [self-hosted, linux, x64, dev]
     env:
-      MAVEN_OPTS: -Xmx1024M
-
+      ENVIRONMENT: DEV
+    environment:
+      name: DEV
+      url: 'http://codich1.ibict.br:8086'
+    
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Clone Vitro
-        run: git clone https://github.com/vivo-project/Vitro.git ../Vitro
-
-      - name: Maven Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-cache-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-cache-m2-
-
-      - name: Setup Java
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
-          server-id: ossrh
-          server-username: MAVEN_USERNAME
-          server-password: MAVEN_PASSWORD
-
-      - name: Maven Deploy
-        run: |
-          cd ../VIVO
-          mvn --batch-mode deploy -Pskip
-        env:
-          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+      - uses: actions/checkout@v3
+      - run: |
+          echo '${{ secrets.SUDO_PASSWORD }}' | sudo -S sh deploy.sh

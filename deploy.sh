@@ -2,8 +2,17 @@
 set -e
 echo "Deploying VIVO Dev"
 
-echo "git pull"
-git pull
+cd ..
+
+# Verifica se a pasta "brcris-vitro" existe
+if [ -d "brcris-vitro" ]; then
+  echo "O 'brcris-vitro' já foi clonado."
+else
+  echo "git clone vitro"
+  git clone https://github.com/projetos-codic-ibict/brcris-vitro.git
+fi
+
+cd brcris-vivo
 
 echo "mvn clean package -s installer/example-settings.xml"
 mvn clean package -s installer/example-settings.xml
