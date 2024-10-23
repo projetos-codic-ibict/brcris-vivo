@@ -119,6 +119,7 @@ section article.property ul.property-list li {
   line-height: 1.3em;
   padding: 0;
   background-color: inherit;
+  margin-bottom: 4px;
 }
 
 section article.property > span:after {
