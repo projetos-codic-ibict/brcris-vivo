@@ -102,11 +102,13 @@ section article.property > span,
 }
 
 section article.property > span:first-letter {
-  text-transform: uppercase;
+  text-transform:uppercase; 
+
 }
 
 .subclass > span:first-letter {
-  text-transform: uppercase;
+  text-transform:uppercase; 
+
 }
 
 section article.property ul.property-list {
@@ -212,4 +214,13 @@ ul#individual-facultyMemberships li {
   .subclass > span {
     width: 100%;
   }
+  ul#individual-hasResearchArea {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1px;
+}
+  ul#individual-hasResearchArea li {
+    border-right: none; 
+}
+
 }
