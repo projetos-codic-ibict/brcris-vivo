@@ -36,9 +36,15 @@
     ${metaTags.list()}
 </#if>
 
-<!--[if (gte IE 6)&(lte IE 8)]>
-<script type="text/javascript" src="${urls.base}/js/selectivizr.js"></script>
-<![endif]-->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FGJCTLZDZJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FGJCTLZDZJ');
+</script>
 
 <#-- Inject head content specified in the controller. Currently this is used only to generate an rdf link on
 an individual profile page. -->
