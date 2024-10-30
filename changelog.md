@@ -74,3 +74,6 @@ webapp/src/main/webapp/i18n/vivo_all_pt_BR.properties
 - Change of property name tag from H3 to span (files created: webapp/src/main/webapp/themes/brcris/templates/individual-properties.ftl)
 - Adding span to label property values (files created: webapp/src/main/webapp/themes/brcris/templates/freemarker/body/partials/individual/propStatement-default.ftl)
 - Custom CSS for BrCris theme (files modified: webapp/src/main/webapp/themes/brcris/css/brcris.css)
+- Added Google Analytics tracking tag (file modified: webapp/src/main/webapp/themes/brcris/templates/head.ftl)
+- Adjusting Formatting (files modified: webapp/src/main/webapp/themes/brcris/templates/individual-overview.ftl)
+- Displaying Research Areas Links in Columns without Separators on Mobile (files modified: webapp/src/main/webapp/themes/brcris/css/brcris.css)
