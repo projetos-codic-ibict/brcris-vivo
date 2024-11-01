@@ -194,7 +194,6 @@ ul#individual-facultyMemberships li {
 #brcrisIdentifier-noRangeClass-List li:after,
 #series-noRangeClass-List li:after {
   content: ", ";
-  margin-left: -3.7px;
 
 }
 

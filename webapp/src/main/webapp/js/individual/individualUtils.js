@@ -121,3 +121,12 @@ $(document).ready(function(){
         }
     }
 });
+
+$(document).ready(function() {
+    // Selects all list items within the specified list
+    $('#freetextKeyword-noRangeClass-List li').each(function() {
+        // Removes whitespace before and after the text
+        var trimmedText = $(this).text().trim();
+        $(this).text(trimmedText);
+    });
+});
