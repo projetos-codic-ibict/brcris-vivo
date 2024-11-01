@@ -180,7 +180,8 @@ ul#individual-facultyMemberships li {
 #pageStart-noRangeClass-List,
 #volume-noRangeClass-List,
 #freetextKeyword-noRangeClass-List,
-#brcrisIdentifier-noRangeClass-List {
+#brcrisIdentifier-noRangeClass-List,
+#series-noRangeClass-List {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
@@ -190,7 +191,8 @@ ul#individual-facultyMemberships li {
 #pageStart-noRangeClass-List li:after,
 #volume-noRangeClass-List li:after,
 #freetextKeyword-noRangeClass-List li:after,
-#brcrisIdentifier-noRangeClass-List li:after {
+#brcrisIdentifier-noRangeClass-List li:after,
+#series-noRangeClass-List li:after {
   content: ", ";
   margin-left: -3.7px;
 
@@ -200,7 +202,8 @@ ul#individual-facultyMemberships li {
 #pageStart-noRangeClass-List li:last-child:after,
 #volume-noRangeClass-List li:last-child:after,
 #freetextKeyword-noRangeClass-List li:last-child:after,
-#brcrisIdentifier-noRangeClass-List li:last-child:after {
+#brcrisIdentifier-noRangeClass-List li:last-child:after,
+#series-noRangeClass-List li:last-child:after {
   content: "";
 }
 
