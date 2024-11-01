@@ -165,10 +165,7 @@ name will be used as the label. -->
     <#else>
         <#local rangeUri = "" />
     </#if>
-    <li role="listitem">
-        <#nested>
-        <@editingLinks "${property.localName}" "${property.name}" statement editable rangeUri/>
-    </li>
+    <li role="listitem"><#local value><#nested></#local>${value?trim}<@editingLinks "${property.localName}" "${property.name}" statement editable rangeUri/></li>
 </#macro>
 
 <#macro editingLinks propertyLocalName propertyName statement editable rangeUri="">
