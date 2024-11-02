@@ -124,9 +124,14 @@ $(document).ready(function(){
 
 $(document).ready(function() {
     // Selects all list items within the specified list
-    $('#freetextKeyword-noRangeClass-List li').each(function() {
-        // Removes whitespace before and after the text
-        var trimmedText = $(this).text().trim();
-        $(this).text(trimmedText);
+    $('.property-list li').each(function() {
+        // Iterate through each child node of the list item
+        $(this).contents().filter(function() {
+            return this.nodeType === 3; // NodeType 3 is a text node
+        }).each(function() {
+            // Remove whitespace before and after the text
+            this.nodeValue = this.nodeValue.trim();
+        });
     });
 });
+
