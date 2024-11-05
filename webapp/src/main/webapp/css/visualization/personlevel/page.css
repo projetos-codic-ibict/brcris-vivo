@@ -192,10 +192,8 @@ table.sparkline_wrapper_table td, th {
     min-width: 800px;
     margin: 0 auto;
     position: relative;
-    background: white;
 }
 #bodyPannel {
-    background: #FFFFFF;
     height: 840px;
     width: 100%;
     clear: both;
