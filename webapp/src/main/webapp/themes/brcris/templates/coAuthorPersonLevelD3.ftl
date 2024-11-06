@@ -282,10 +282,11 @@ $(document).ready(function(){
     </#if>
 
     <#if (numOfCoAuthorShips?? && numOfCoAuthorShips > 0) || (numOfAuthors?? && numOfAuthors > 0) >
-
+    <div id="bodyContentBox">
         <div id="bodyPannel">
             <div id="chord" style="float: right;"></div>
         </div>
+    </div>
     </#if>
 
     <div style="clear:both"></div>
