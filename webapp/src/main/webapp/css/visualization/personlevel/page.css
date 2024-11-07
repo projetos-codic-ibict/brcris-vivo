@@ -199,8 +199,11 @@ table.sparkline_wrapper_table td, th {
     height: 100%;
 }
 #bodyPannel {
-    max-width: 900px;
-    min-width: 800px;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
     height: 840px;
     width: 100%;
     clear: both;
@@ -264,3 +267,4 @@ table.sparkline_wrapper_table td, th {
 #table_heading {
     width: 80%;
 }
+
