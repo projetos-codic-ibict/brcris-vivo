@@ -258,11 +258,13 @@ $(document).ready(function(){
         <div class = "graphml-file-link">(<a href="${egoCoAuthorshipNetworkDataFileURL}" title="GraphML ${i18n().file}">GraphML ${i18n().file}</a>)</div>
     </#if>
     <div class="container">
-	  <div class="text-end">
-		<button type="button" id="data-info" class="text-end btn btn-primary btn-xs btn-danger" data-bs-toggle="popover" data-placement="left" title="Fonte de Dados" data-bs-content="Os dados para geração deste gráfico são coletados de várias fontes de pesquisa. Para mais informações, <a href='http://codich1.ibict.br:8086/data-source-info'>clique aqui</a>.">De onde vêm esses dados <i class="bi bi-question-circle"></i></button>
-		</p>
-	  </div>
-	</div>
+  <div class="text-end">
+    <button type="button" id="data-info" class="btn btn-primary btn-xs btn-danger" data-bs-toggle="popover" data-placement="left" title="Fonte de Dados" data-bs-content="Os dados para geração deste gráfico são coletados de várias fontes de pesquisa. Para mais informações, <a href='http://codich1.ibict.br:8086/data-source-info'>clique aqui</a>.">
+      De onde vêm esses dados <i class="bi bi-question-circle"></i>
+    </button>
+  </div>
+</div>
+
     <div class = "toggle_visualization">
         <div id="coinvestigator_link_container" class="collaboratorship-link-container">
             <div class="collaboratorship-icon"><a href="${coprincipalinvestigatorURL}" title="${i18n().co_investigator}"><img src="${coInvestigatorIcon}" alt="${i18n().co_investigator_icon}"/></a></div>
