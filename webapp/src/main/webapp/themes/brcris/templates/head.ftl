@@ -28,6 +28,17 @@
 	
 	<link rel="stylesheet" href="${urls.theme}/css/brcris.css" />	
 	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var popoverTriggerEl = document.getElementById('data-info');
+            var popover = new bootstrap.Popover(popoverTriggerEl, {
+                container: 'body',
+                html: true,
+                trigger: 'focus'
+            });
+        });
+    </script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <#include "headScripts.ftl">
