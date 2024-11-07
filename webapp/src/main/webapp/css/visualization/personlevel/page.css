@@ -268,7 +268,7 @@ table.sparkline_wrapper_table td, th {
     width: 80%;
 }
 
-.btn-xs {
+.text-end .btn-xs {
     padding: .25rem .4rem;
     font-size: .775rem;
     line-height: .5;
