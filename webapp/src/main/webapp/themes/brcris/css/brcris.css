@@ -50,6 +50,12 @@ h3 {
   font-weight: 400;
 }
 
+.sub_headings {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .title h2 {
   font-weight: 400;
 }

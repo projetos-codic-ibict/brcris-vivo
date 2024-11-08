@@ -1,9 +1,3 @@
-.sub_headings {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
 a.no_href_styles {
   border: 0;
 }
