@@ -36,15 +36,22 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 h3 {
-  font-size: 1.17rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.title h2 {
+  font-weight: 400;
 }
 
 #individual-intro span.display-title {
@@ -102,13 +109,11 @@ section article.property > span,
 }
 
 section article.property > span:first-letter {
-  text-transform:uppercase; 
-
+  text-transform: uppercase;
 }
 
 .subclass > span:first-letter {
-  text-transform:uppercase; 
-
+  text-transform: uppercase;
 }
 
 section article.property ul.property-list {
@@ -194,7 +199,6 @@ ul#individual-facultyMemberships li {
 #brcrisIdentifier-noRangeClass-List li:after,
 #series-noRangeClass-List li:after {
   content: ", ";
-
 }
 
 #pageEnd-noRangeClass-List li:last-child:after,
@@ -222,9 +226,11 @@ ul#individual-facultyMemberships li {
     display: flex;
     flex-direction: column;
     margin-left: 1px;
-}
+  }
   ul#individual-hasResearchArea li {
-    border-right: none; 
-}
-
+    border-right: none;
+  }
+  .mobile-hidden {
+    display: none;
+  }
 }

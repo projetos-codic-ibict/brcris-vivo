@@ -253,13 +253,15 @@ $(document).ready(function(){
 </script>
 
 <div id="body">
-	<div  class="sub_headings"><h2><a href="${egoVivoProfileURL}" title="${i18n().author_name}"><span id="ego_label"></span></a><br />${i18n().co_author_network} </h2></div>
-     <div class="container">
-        <div class="text-end">
-        <button type="button" id="data-info" class="btn btn-primary btn-xs btn-danger" data-bs-toggle="popover" data-placement="left" title="Fonte de Dados" data-bs-content="Os dados para geração deste gráfico são coletados de várias fontes de pesquisa. Para mais informações, <a href='http://codich1.ibict.br:8086/data-source-info'>clique aqui</a>.">
-         De onde vêm esses dados <i class="bi bi-question-circle"></i>
+	<div  class="sub_headings">
+        <hgroup class="title">
+            <h1> <a href="${egoVivoProfileURL}" title="${i18n().author_name}"><span id="ego_label"></span></a></h1>
+            <h2>${i18n().co_author_network}</h2>
+        </hgroup>
+
+        <button type="button" id="data-info" class="btn btn-outline-secondary" data-bs-toggle="popover" data-placement="bottom" title="Fonte de Dados" data-bs-content="Os dados para geração deste gráfico são coletados de várias fontes de pesquisa. Para mais informações, <a href='http://codich1.ibict.br:8086/data-source-info'>clique aqui</a>.">
+            <span class="mobile-hidden">De onde vêm esses dados</span> <i class="bi bi-question-circle"></i>
         </button>
-        </div>
     </div>
     <#if (numOfCoAuthorShips?? && numOfCoAuthorShips > 0) || (numOfAuthors?? && numOfAuthors > 0) >
         <div class = "graphml-file-link">(<a href="${egoCoAuthorshipNetworkDataFileURL}" title="GraphML ${i18n().file}">GraphML ${i18n().file}</a>)</div>

@@ -16,16 +16,12 @@
 	
 	<section id="pageList">
         <#list stats as firstRow>
-            <div class="tab">
-                <h2><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h2>
+            <div class="sub_headings">
+                <h1><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h1>
+								<button type="button" id="data-info" class="btn btn-outline-secondary" data-bs-toggle="popover" data-placement="bottom" title="Fonte de Dados" data-bs-content="Os dados para geração deste gráfico são coletados de várias fontes de pesquisa. Para mais informações, <a href='http://codich1.ibict.br:8086/data-source-info'>clique aqui</a>.">
+										<span class="mobile-hidden">De onde vêm esses dados</span> <i class="bi bi-question-circle"></i>
+								</button>
             </div>
-			 <div class="container">
-			<div class="text-end">
-				<button type="button" id="data-info" class="btn btn-primary btn-xs btn-danger" data-bs-toggle="popover" data-placement="left" title="Fonte de Dados" data-bs-content="Os dados para geração deste gráfico são coletados de várias fontes de pesquisa. Para mais informações, <a href='http://codich1.ibict.br:8086/data-source-info'>clique aqui</a>.">
-				De onde vêm esses dados <i class="bi bi-question-circle"></i>
-				</button>
-			</div>
-			</div>
             <#break>
         </#list>
     </section>
