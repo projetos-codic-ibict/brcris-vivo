@@ -59,7 +59,9 @@ h3 {
 .title h2 {
   font-weight: 400;
 }
-
+.mobile-hidden {
+  font-size: 0.9rem;
+}
 #individual-intro span.display-title {
   color: #5e6363;
   font-weight: 300;
