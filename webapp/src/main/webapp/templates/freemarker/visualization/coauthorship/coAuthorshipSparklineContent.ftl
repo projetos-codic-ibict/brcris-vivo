@@ -25,7 +25,7 @@
                 };
             <#else>
                 var visualizationOptions = {
-                    width: 250,
+                    width: 150,
                     height: 75,
                     color: '3399CC',
                     chartType: 'ls',

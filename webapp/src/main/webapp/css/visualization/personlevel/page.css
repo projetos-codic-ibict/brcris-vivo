@@ -10,25 +10,33 @@ a.no_href_styles {
   /*color: white;*/
   border: 0;
 }
+
 .vis_stats {
   background: #fff;
-  clear: right;
   width: 67%;
-  margin-left: 33%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .vis_stats_full {
   background: #fff;
-  clear: right;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  padding: 20px;
 }
 .vis-tables {
   padding: 10px;
   background-color: #fff;
   border: 1px solid #ddebf1;
-  float: left;
   font-size: 0.8em;
   width: 44%;
   margin: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 #chord-info-div {
   border: 1px solid #000000;
@@ -46,18 +54,20 @@ p.datatable {
   text-align: left;
 }
 .datatable img {
-  float: left;
+  display: flex;
+  justify-content: flex-start;
   cursor: pointer;
 }
 #sparkline-container {
-  clear: both;
   margin-left: 33%;
   width: 67%;
-  float: right;
+  display: flex;
+  justify-content: flex-end;
 }
 #sparkline-container-full {
-  clear: both;
   width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sparkline_wrapper_table {
@@ -77,19 +87,18 @@ p.datatable {
 }
 
 .toggle_visualization {
+  display: flex;
+  justify-content: flex-end;
   max-width: 230px;
-  float: right;
   display: none;
   margin-top: -55px;
 }
 #publication-count-sparkline-include,
 #grant-count-sparkline-include {
-  float: left;
   width: 50%;
 }
 #coauthor-count-sparkline-include,
 #coinvestigator-count-sparkline-include {
-  float: right;
   width: 50%;
 }
 
@@ -101,12 +110,14 @@ th {
   height: 1%; /* this was the key to killing the IE6 bug (no upper photo and sparklines jump on hover). Solution? Give the parent layout */
   background: #fff;
   /*  min-height: 100px;   tlw72 -- adding this to IE6.css; otherwise, this puts too much space between the h2 and h3 */
-  float: left;
+  display: flex;
+  align-items: center;
   max-width: 50%;
 }
 
 #ego_profile_image {
-  float: left;
+  display: flex;
+  justify-content: flex-start;
   padding-right: 5px;
 }
 #ego_profile_image img,
@@ -131,8 +142,9 @@ th {
   width: 50%;
 }
 #visPanel {
-  float: right;
   width: 600px;
+  display: flex;
+  justify-content: flex-end;
 }
 .vis-tables table caption {
   width: 100%;
@@ -167,7 +179,6 @@ th {
 .spacer {
   font-size: 0;
   line-height: 0;
-  clear: both;
 }
 /* <------ BODY START*/
 #body {
@@ -179,7 +190,7 @@ th {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 #bodyPannel {
   display: flex;
@@ -187,16 +198,17 @@ th {
   max-width: 100%;
   min-width: 0;
   width: 100%;
-  height: 840px;
   width: 100%;
-  clear: both;
+  
 }
 #dataPanel {
   border: 1px solid #e9e9e9;
   background: #f7f9f9;
   width: 250px;
   height: 615px;
-  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 #dataPanel div {
   font-family: Arial, Helvetica, sans-serif;
@@ -212,9 +224,10 @@ th {
 }
 #dataPanel .investigator_stats .numbers,
 #dataPanel .author_stats .numbers {
+  display: flex;
+  justify-content: flex-start;
   text-align: right;
   width: 40px;
-  float: left;
 }
 #data-panel-content h4 {
   padding-bottom: 0;
@@ -251,10 +264,36 @@ th {
   width: 80%;
 }
 
-.text-end .btn-xs {
-  padding: 0.25rem 0.4rem;
-  font-size: 0.775rem;
-  line-height: 0.5;
-  border-radius: 0.2rem;
-  margin-top: 30px;
+
+@media (max-width: 768px) {
+  .staticPageBackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .vis_stats_full {
+    display: block;
+    padding: 10px;
+  }
+
+  .vis_stats {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vis-tables {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .vis-tables table caption {
+    font-size: 14px;
+  }
+
+  .vis-tables table th, .vis-tables table td {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
