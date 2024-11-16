@@ -278,7 +278,6 @@ $(document).ready(function(){
     <#if (builtFromCacheTime??) >
         <div class="cache-info-small">${i18n().using_cache_time} ${builtFromCacheTime?time} (${builtFromCacheTime?date?string("MMM dd yyyy")})</div>
     </#if>
-    <div style="clear:both;"></div>
 
     <#if (numOfAuthors?? && numOfAuthors > 0) >
     <#else>
@@ -297,18 +296,17 @@ $(document).ready(function(){
     </div>
     </#if>
 
-    <div style="clear:both"></div>
-        <div id="incomplete-data-small">${i18n().incomplete_data_note1}<p></p><p></p>
+        <div id="incomplete-data-small">${i18n().incomplete_data_note1}
             <#if user.loggedIn >
                 ${i18n().incomplete_data_note2}
             <#else>
                 
             </#if>
         </div>
-        <p></p>
-    <div style="clear:both"></div>
 
     <#if (numOfAuthors?? && numOfAuthors > 0) >
+
+    <div class="coauthor-data-container">
 
         <#-- Sparkline -->
         <div id="sparkline-container-full">
@@ -323,9 +321,7 @@ $(document).ready(function(){
         </div>
 
         <div class="vis_stats_full">
-
-        <div class="sub_headings" id="table_heading"><h3>${i18n().tables_capitalized}</h3></div>
-
+            <#--  <div class="sub_headings" id="table_heading"><h3>${i18n().tables_capitalized}</h3></div>  -->
             <div class="vis-tables">
 
                 <p id="publications_table_container" class="datatable">
@@ -359,11 +355,11 @@ $(document).ready(function(){
 
             </#if>
 
-            <div style="clear:both"></div>
 
         </div>
 
     </#if>
 
+</div>
 </div>
 <div id="chord-info-div" style="display: none;"></div>

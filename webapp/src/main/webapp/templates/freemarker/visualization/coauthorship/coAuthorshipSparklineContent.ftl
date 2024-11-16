@@ -141,7 +141,7 @@
                         var pubDisplay = "${i18n().co_authors?js_string}";
                     }
 
-                    $('#${sparklineContainerID} td.sparkline_number').text(totalPubs).css("font-weight", "bold").attr("class", "grey").append("<span style='color: #2485AE;'> " + pubDisplay + " <br/></span>");
+                    $('#${sparklineContainerID} td.sparkline_number').text(totalPubs).css("font-weight", "normal").attr("class", "grey").append("<span style='color: #2485AE;'> " + pubDisplay + " <br/></span>");
 
                     var sparksText = '  ${i18n().within_last_10_years?js_string}';
 
@@ -170,7 +170,7 @@
                         var pubDisplay = "${i18n().co_authors?js_string}";
                     }
 
-                    $('#${sparklineContainerID} td.sparkline_number').text(totalPubs).css("font-weight", "bold").attr("class", "grey").append("<span style='color: #2485AE;'> " + pubDisplay + " <br/></span>");
+                    $('#${sparklineContainerID} td.sparkline_number').text(totalPubs).css("font-weight", "normal").attr("class", "grey").append("<span style='color: #2485AE;'> " + pubDisplay + " <br/></span>");
 
                     var sparksText = '  ${i18n().from?js_string} <span class="sparkline_range">${sparklineVO.earliestYearConsidered?c}'
                                         + ' - ${sparklineVO.latestRenderedPublicationYear?c}</span>';
