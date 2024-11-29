@@ -18,8 +18,7 @@
         <#list stats as firstRow>
             <div class="sub_headings">
                 <h1><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h1>
-					<#include "popover.ftl">
-
+								<#include "popover.ftl">
             </div>
             <#break>
         </#list>
@@ -35,7 +34,7 @@
 	
 	<section id="graphTitle">
 		<div class="title-holder">
-			<h2 class="title">${i18n().prod_stats}</h1>
+			<h2 class="title">${i18n().prod_stats}</h2>
 		</div>
 	</section>
 	
