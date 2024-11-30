@@ -4,7 +4,7 @@
 </#if>
 
 <div id="__next">
-<nav class="navbar navbar-dark bg-violet px-5">
+<nav class="navbar navbar-dark navbar-expand-lg bg-violet py-0">
   <div class="container-fluid d-flex">
     <div class="flex-nowrap d-flex align-items-center flex-justify-content-between"><a class="navbar-brand" href="/">
       <picture class="navbar-logo"><img class="img-fluid brcris" src="${urls.theme}/images/logo-brcris-pb.png" alt="logo do brcris"></picture>
