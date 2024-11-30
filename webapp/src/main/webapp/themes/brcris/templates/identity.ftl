@@ -6,7 +6,7 @@
 <div id="__next">
 <nav class="navbar navbar-dark navbar-expand-lg bg-violet py-0">
   <div class="container-fluid d-flex">
-    <div class="flex-nowrap d-flex align-items-center flex-justify-content-between"><a class="navbar-brand" href="/">
+    <div class="flex-nowrap d-flex align-items-end flex-justify-content-between"><a class="navbar-brand" href="/">
       <picture class="navbar-logo"><img class="img-fluid brcris" src="${urls.theme}/images/logo-brcris-pb.png" alt="logo do brcris"></picture>
       </a><a class="navbar-brand" href="https://www.gov.br/ibict/pt-br" target="_blank" rel="noreferrer">
       <picture class="navbar-logo"><img class="img-fluid ibict" src="${urls.theme}/images/logo-ibict-pb-st.png" alt="logo do ibict"></picture>

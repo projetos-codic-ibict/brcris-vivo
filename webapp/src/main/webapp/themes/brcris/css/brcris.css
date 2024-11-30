@@ -50,6 +50,10 @@ h3 {
   font-weight: 400;
 }
 
+.navbar {
+  height: 90px;
+}
+
 .navbar-expand-lg {
   padding-left: 0;
   padding-right: 0;
@@ -226,6 +230,12 @@ ul#individual-facultyMemberships li {
 
 /* CSS para telas menores que 768px(celulares e tablets pequenos) */
 @media only screen and (max-width: 768px) {
+  .navbar-logo .ibict {
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    margin-left: auto;
+  }
   #individual-intro.person {
     flex-direction: column;
   }
