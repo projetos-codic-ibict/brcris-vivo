@@ -233,6 +233,10 @@ ul#individual-facultyMemberships li {
   .navbar {
     min-height: 90px;
     height: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    align-items: baseline;
+    padding-top: 8px !important;
   }
 
   .navbar-logo .ibict {
