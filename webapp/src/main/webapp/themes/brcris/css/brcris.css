@@ -221,9 +221,6 @@ ul#individual-facultyMemberships li {
 
 /* CSS para telas menores que 768px(celulares e tablets pequenos) */
 @media only screen and (max-width: 768px) {
-  .navbar-expand-lg {
-    padding: 0;
-  }
   #individual-intro.person {
     flex-direction: column;
   }
