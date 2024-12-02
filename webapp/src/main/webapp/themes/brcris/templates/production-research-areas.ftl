@@ -10,14 +10,15 @@
 	<#assign pubsLabel = "${i18n().res_area_pubs}">
   <#assign dataString = "[ ">
 	
-    <section id="pageList">
-        <#list areas as firstRow>
-            <div class="tab">
-                <h2><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h2>
-            </div>
-            <#break>
-        </#list>
-    </section>
+   <div id="body">
+	<div  class="sub_headings">
+        <hgroup class="title">
+            <h1> <a href="${egoVivoProfileURL}" title="${i18n().author_name}"><span id="ego_label"></span></a></h1>
+       			<h2 class="title">${i18n().prod_research_areas_full}</h2>
+	    </hgroup>
+
+            <#include "popover.ftl">
+    </div>
     <section id="areaList">
         <#list areas as resultRow>
 			<#assign areaData = "{\"label\": \"" + resultRow["areaName"]  + "\", \"count\": " + resultRow["total"] + "}, ">	
@@ -25,13 +26,7 @@
         </#list>
 		<#assign dataString = dataString?keep_before_last(", ") + " ]">
     </section>
-	
-	<section id="graphTitle">
-		<div class="title-holder">
-			<h2 class="title">${i18n().prod_research_areas_full}</h1>
-		</div>
-	</section>	
-	
+		
 	<section id="graphRendering">
 	
 	<div id="chart">
