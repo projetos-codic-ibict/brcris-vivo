@@ -8,16 +8,19 @@
     ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/themes/brcris/css/tagcloud/style.css"/>')}
 	
 	<#assign dataString = "[ ">
-	
-    <section id="pageList">
+	   
+     <div id="body">
+    <div id="sub_headings">
         <#list keywords as firstRow>
-            <div class="tab">
+            <hgroup class="title">
                 <h2><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h2>
-            </div>
+           			<h2 class="title">${i18n().prod_tag_cloud_full}</h2>
+            </hgroup>
+            <#include "popover.ftl">
             <#break>
         </#list>
-    </section>
-	
+    </div>
+	</div>
 	<section id="keywordList">
         <#list keywords as resultRow>
 			<#assign keywordData = "{\"key\": \"" + resultRow["tag"]  + "\", \"value\": " + resultRow["total"] + "}, ">	
@@ -25,12 +28,6 @@
         </#list>
 		<#assign dataString = dataString?keep_before_last(", ") + " ]">
     </section>
-	
-	<section id="cloudTitle">
-		<div class="title-holder">
-			<h2 class="title">${i18n().prod_tag_cloud_full}</h1>
-		</div>
-	</section>
 	
 	<section id="cloudRendering">
 	
