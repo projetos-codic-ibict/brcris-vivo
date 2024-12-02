@@ -9,7 +9,7 @@
 	
 	<#assign dataString = "[ ">
 	   
-    <div id="sub_headings">
+    <div class="sub_headings">
         <#list keywords as firstRow>
             <hgroup class="title">
                 <h2><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h2>
