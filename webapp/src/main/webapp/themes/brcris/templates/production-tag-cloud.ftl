@@ -9,7 +9,6 @@
 	
 	<#assign dataString = "[ ">
 	   
-     <div id="body">
     <div id="sub_headings">
         <#list keywords as firstRow>
             <hgroup class="title">
@@ -19,7 +18,6 @@
             <#include "popover.ftl">
             <#break>
         </#list>
-    </div>
 	</div>
 	<section id="keywordList">
         <#list keywords as resultRow>
