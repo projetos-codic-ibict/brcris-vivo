@@ -13,8 +13,8 @@
    <div id="body">
 	<div  class="sub_headings">
         <hgroup class="title">
-            <h1> <a href="${egoVivoProfileURL}" title="${i18n().author_name}"><span id="ego_label"></span></a></h1>
-       			<h2 class="title">${i18n().prod_research_areas_full}</h2>
+		        <h2><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h2>
+				<h2 class="title">${i18n().prod_research_areas_full}</h2>
 	    </hgroup>
 
             <#include "popover.ftl">
