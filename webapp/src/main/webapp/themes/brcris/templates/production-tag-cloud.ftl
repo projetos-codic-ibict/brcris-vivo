@@ -12,7 +12,7 @@
     <div class="sub_headings">
         <#list keywords as firstRow>
             <hgroup class="title">
-                <h2><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h2>
+                <h1><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h1>
            			<h2 class="title">${i18n().prod_tag_cloud_full}</h2>
             </hgroup>
             <#include "popover.ftl">
