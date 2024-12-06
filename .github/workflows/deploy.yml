@@ -14,8 +14,8 @@ jobs:
       ENVIRONMENT: DEV
     environment:
       name: DEV
-      url: 'http://codich1.ibict.br:8086'
-    
+      url: "http://codich1.ibict.br:8086"
+
     steps:
       - uses: actions/checkout@v3
       - run: |

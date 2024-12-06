@@ -55,8 +55,8 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-FGJCTLZDZJ');
+  console.log('Google tag (gtag.js) loaded');
 </script>
 
 <#-- Inject head content specified in the controller. Currently this is used only to generate an rdf link on
