@@ -227,7 +227,10 @@ ul#individual-facultyMemberships li {
 #series-noRangeClass-List li:last-child:after {
   content: "";
 }
-
+.tooltip-content{
+  font-size:1.2em;
+  margin-bottom:-1.2em
+}
 /* CSS para telas menores que 768px(celulares e tablets pequenos) */
 @media only screen and (max-width: 768px) {
   .navbar {
