@@ -109,3 +109,8 @@ span.incomplete-data-holder,
 section.visualizationTools h3, section.visualizationTools p {
     margin-left:20px;
 }
+.tooltip-content p
+ {
+    margin-bottom:-1px;
+    line-height: 1em;  
+ }

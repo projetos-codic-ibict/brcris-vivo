@@ -6,8 +6,7 @@ $(document).ready(function() {
             prerender: true,
             content: {
                 text: `<div class="tooltip-content">
-                          <div>${i18nStrings.researchAreaTooltipOne}</div>
-                          <div>${i18nStrings.researchAreaTooltipTwo}</div>
+                          <p>${i18nStrings.researchAreaTooltip}</p>
                        </div>`
             },
             position: {

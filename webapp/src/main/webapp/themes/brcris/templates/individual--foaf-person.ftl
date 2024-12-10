@@ -143,8 +143,7 @@
         displayMoreEllipsis: '${i18n().display_more_ellipsis}',
         showMoreContent: '${i18n().show_more_content}',
         verboseTurnOff: '${i18n().verbose_turn_off}',
-        researchAreaTooltipOne: '${i18n().research_area_tooltip_one}',
-        researchAreaTooltipTwo: '${i18n().research_area_tooltip_two}'
+        researchAreaTooltip: '${i18n().research_area_tooltip}',
     };
     var i18nStringsUriRdf = {
         shareProfileUri: '${i18n().share_profile_uri}',
