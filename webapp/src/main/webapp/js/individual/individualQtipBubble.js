@@ -16,8 +16,9 @@ $(document).ready(function() {
             },
             style: {
                 classes: 'researchAreaTip',
-                height: 56,
-                width: 180,
+                height: 66,
+                width: 220,
+                padding:10,
             }
         });
     });

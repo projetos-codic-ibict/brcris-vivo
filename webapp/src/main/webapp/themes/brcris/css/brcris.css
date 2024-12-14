@@ -227,8 +227,10 @@ ul#individual-facultyMemberships li {
 #series-noRangeClass-List li:last-child:after {
   content: "";
 }
-.tooltip-content{
-  margin-bottom:-1.2em
+.researchAreaTip{
+  border: 1px solid #e83ca1;
+  background-color: #f7f7f7;
+
 }
 /* CSS para telas menores que 768px(celulares e tablets pequenos) */
 @media only screen and (max-width: 768px) {
