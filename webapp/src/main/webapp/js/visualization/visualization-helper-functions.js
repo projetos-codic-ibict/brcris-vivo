@@ -60,3 +60,11 @@ function toTitleCase(str) {
 		return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
 	});
 }
+
+$(document).ready(function() {
+    $('#individual-hasResearchArea li a').replaceWith(function() {
+        return $('<p />', {
+            html: $(this).html()
+        });
+    });
+})
