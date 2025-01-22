@@ -68,12 +68,7 @@ ul#additional-emails li {
     margin-top: 10px;
 }
 /* <------ INDIVIDUAL INTRO - RIGHT SIDE CONTENT */
-#individual-intro .individual-overview {
-    margin: 0;
-    display: inline;
-    clear: both;
-    float: none;
-}
+
 div#activeGrantsLink {
     float:right;
     clear:right;
