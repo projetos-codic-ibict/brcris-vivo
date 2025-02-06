@@ -221,6 +221,10 @@ ul#individual-facultyMemberships li {
   flex-wrap: wrap;
 }
 
+#freetextKeyword-noRangeClass-List{
+  list-style:none
+}
+
 #pageEnd-noRangeClass-List li:after,
 #pageStart-noRangeClass-List li:after,
 #volume-noRangeClass-List li:after,
