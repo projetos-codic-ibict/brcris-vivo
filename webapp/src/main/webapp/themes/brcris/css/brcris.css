@@ -142,8 +142,8 @@ section article.property ul.property-list {
 }
 
 section article.property ul.property-list:has(li:nth-child(2)) {
-  list-style: disc; 
-  padding-left: 20px; 
+  list-style: disc;
+  padding-left: 20px;
 }
 
 section article.property ul.property-list li {
@@ -181,8 +181,8 @@ ul#individual-facultyMemberships li {
 
 #individual-hasResearchArea li p {
   display: inline;
-  margin: 0; 
-  padding: 0;   
+  margin: 0;
+  padding: 0;
 }
 
 .mainPropGroup::first-letter {
@@ -221,8 +221,8 @@ ul#individual-facultyMemberships li {
   flex-wrap: wrap;
 }
 
-#freetextKeyword-noRangeClass-List{
-  list-style:none
+#freetextKeyword-noRangeClass-List {
+  list-style: none;
 }
 
 #pageEnd-noRangeClass-List li:after,
@@ -242,11 +242,21 @@ ul#individual-facultyMemberships li {
 #series-noRangeClass-List li:last-child:after {
   content: "";
 }
-.researchAreaTip{
+.researchAreaTip {
   border: 1px solid #e83ca1;
   background-color: #f7f7f7;
-
 }
+
+.author-lattes {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.author-lattes img {
+  max-width: 1rem;
+}
+
 /* CSS para telas menores que 768px(celulares e tablets pequenos) */
 @media only screen and (max-width: 768px) {
   .navbar {
