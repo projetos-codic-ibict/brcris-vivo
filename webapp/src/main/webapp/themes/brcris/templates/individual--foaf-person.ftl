@@ -64,12 +64,12 @@
             </#if>
             <!-- Positions -->
             <#include "individual-positions.ftl">
-        </header>
-
                 <!-- lattes -->
         <#include "lattesIdentifier.ftl">
                  <!-- orcid -->
         <#include "orcid.ftl">
+        </header>
+
                 <!-- Overview -->
         <#include "individual-overview.ftl">
 
