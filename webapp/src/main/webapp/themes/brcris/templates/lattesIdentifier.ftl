@@ -1,4 +1,4 @@
-<#assign lattes = propertyGroups.pullProperty("http://vivoweb.org/ontology/core#lattesIdentifier")!>
+<#assign lattes = propertyGroups.pullProperty("https://brcris.ibict.br/ontology/lattesIdentifier")!>
 
 <#if lattes?has_content>
     <@p.addLinkWithLabel lattes editable />
