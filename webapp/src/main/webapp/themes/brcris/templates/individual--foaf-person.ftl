@@ -66,8 +66,8 @@
             <#include "individual-positions.ftl">
         </header>
 
-        <!-- metaTag keywords -->
-        <#include "meta-tag-keyword.ftl">
+        <!-- lattes -->
+        <#include "lattesIdentifier.ftl">
                 <!-- Overview -->
         <#include "individual-overview.ftl">
 
