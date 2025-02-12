@@ -66,8 +66,10 @@
             <#include "individual-positions.ftl">
         </header>
 
-        <!-- lattes -->
+                <!-- lattes -->
         <#include "lattesIdentifier.ftl">
+                 <!-- orcid -->
+        <#include "orcid.ftl">
                 <!-- Overview -->
         <#include "individual-overview.ftl">
 
