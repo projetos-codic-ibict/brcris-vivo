@@ -30,9 +30,9 @@
                 </a>
             </span>
         <#elseif rangeClass == "Name" && property.statements?has_content && editable >
-            <span data="1" id="${property.localName}" title="${property.publicDescription!}">${property.name}<@p.verboseDisplay property /></span>
+            <span id="${property.localName}" title="${property.publicDescription!}">${property.name}<@p.verboseDisplay property /></span>
         <#elseif rangeClass == "Title" && property.statements?has_content && editable >
-            <span data="2" id="${property.localName}" title="${property.publicDescription!}">${property.name}<@p.verboseDisplay property /></span>
+            <span id="${property.localName}" title="${property.publicDescription!}">${property.name}<@p.verboseDisplay property /></span>
 <#elseif rangeClass == "Authorship" && !individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
   <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
 <#elseif rangeClass == "ResearcherRole" && !individual.editable>
@@ -41,7 +41,7 @@
             <#--  <#assign dynamicKey = property.name?lower_case?replace("/", "_")?replace(" ", "_")>
             ${i18n()[dynamicKey]}
               -->
-            <span data-property="${property?json}" id="${property.localName}" title="${property.publicDescription!}">${property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
+            <span data-property="${property.label}" id="${property.localName}" title="${property.publicDescription!}">${property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
         </#if>
         <#-- List the statements for each property -->
   <#assign limit = property.getDisplayLimit()!5 />
