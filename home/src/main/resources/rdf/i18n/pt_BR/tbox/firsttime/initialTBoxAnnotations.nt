@@ -739,7 +739,7 @@
 <http://vivoweb.org/ontology/scientific-research#Phase2ClinicalTrial> <http://www.w3.org/2000/01/rdf-schema#label> "Ensaio clínico de fase 2"@pt-BR .
 <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> <http://www.w3.org/2000/01/rdf-schema#label> "código AGROVOC"@pt-BR .
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/2000/01/rdf-schema#label> "contribuinte"@pt-BR .
-<http://purl.obolibrary.org/obo/RO_0002350> <http://www.w3.org/2000/01/rdf-schema#label> "membro de::"@pt-BR .
+<http://purl.obolibrary.org/obo/RO_0002350> <http://www.w3.org/2000/01/rdf-schema#label> "membro de"@pt-BR .
 <http://www.w3.org/2006/vcard/ns#telephone> <http://www.w3.org/2000/01/rdf-schema#label> "Telefone"@pt-BR .
 <http://purl.obolibrary.org/obo/ARG_2000009> <http://www.w3.org/2000/01/rdf-schema#label> "Medição de perícia"@pt-BR .
 <http://purl.obolibrary.org/obo/ERO_0000037> <http://www.w3.org/2000/01/rdf-schema#label> "contato ou provedor de serviços"@pt-BR .
