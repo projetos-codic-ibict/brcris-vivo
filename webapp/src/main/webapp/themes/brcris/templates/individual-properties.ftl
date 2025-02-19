@@ -39,10 +39,8 @@
   <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
 <#else>
             <#assign dynamicKey = property.name?lower_case?replace("/", "_")?replace(" ", "_")>
-            <#assign translatedValue = "">
-            <#if i18n()?keys?seq_contains(dynamicKey)>
-                <#assign translatedValue = i18n()[dynamicKey]>
-            <#else>
+            <#assign translatedValue = i18n()[dynamicKey]!property.name>
+            <#if translatedValue?starts_with("ERROR:")>
                 <#assign translatedValue = property.name>
             </#if>
             <span id="${property.localName}" title="${property.publicDescription!}">${translatedValue}<@p.addLink property editable /><@p.verboseDisplay property /></span>
