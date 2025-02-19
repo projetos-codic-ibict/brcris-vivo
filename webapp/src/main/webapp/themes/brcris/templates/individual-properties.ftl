@@ -43,7 +43,7 @@
             <#if translatedValue?starts_with("ERROR:")>
                 <#assign translatedValue = property.name>
             </#if>
-            <span id="${property.localName}" title="${property.publicDescription!}">${translatedValue}<@p.addLink property editable /><@p.verboseDisplay property /></span>
+            <span dynamicKey="${dynamicKey}" id="${property.localName}" title="${property.publicDescription!}">${translatedValue}<@p.addLink property editable /><@p.verboseDisplay property /></span>
         </#if>
         <#-- List the statements for each property -->
   <#assign limit = property.getDisplayLimit()!5 />
