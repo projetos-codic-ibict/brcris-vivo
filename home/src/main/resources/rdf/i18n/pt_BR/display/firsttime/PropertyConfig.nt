@@ -1,7 +1,7 @@
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/personInPositionConfig> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "posições"@pt-BR .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/organizationForPositionConfig> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "pessoas"@pt-BR .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/authorInAuthorshipConfig> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "publicações selecionadas"@pt-BR .
-<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/orgInAuthorshipConfig> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "publicações selecionadas"@pt-BR .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/authorInAuthorshipConfig> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "publicações"@pt-BR .
+<http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/orgInAuthorshipConfig> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "publicações"@pt-BR .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/hasServiceProviderRoleConfig> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "atividades de serviços profissionais"@pt-BR .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/hasClinicalRoleConfig> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "atividades clínicas"@pt-BR .
 <http://vitro.mannlib.cornell.edu/ns/vitro/siteConfig/orgHasClinicalRoleConfig> <http://vitro.mannlib.cornell.edu/ns/vitro/ApplicationConfiguration#displayName> "atividades clínicas"@pt-BR .
