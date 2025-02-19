@@ -38,8 +38,15 @@
 <#elseif rangeClass == "ResearcherRole" && !individual.editable>
   <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
 <#else>
-            <#assign dynamicKey = property.name?lower_case?replace("/", "_")?replace(" ", "_")>
-            <span id="${property.localName}" title="${property.publicDescription!}">${(i18n()[dynamicKey])!?property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
+            <#assign dynamicKey = property.name?lower_case?replace("/", "_")?replace(" ", "_") />
+            <span id="${property.localName}" title="${property.publicDescription!}">
+                <#attempt>
+                    ${i18n()[dynamicKey]}
+                <#recover>
+                    ${property.name}
+                </#attempt>
+                <@p.addLink property editable /><@p.verboseDisplay property />
+            </span>
         </#if>
         <#-- List the statements for each property -->
   <#assign limit = property.getDisplayLimit()!5 />
