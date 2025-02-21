@@ -20,7 +20,7 @@
         <li class="nav-item me-5" role="presentation"><a class="nav-link" href="${homeUrl}/dashboards">${i18n().dashboards}</a></li>
 		
 		
-		<li class="nav-item me-5" role="presentation">
+		<#--  <li class="nav-item me-5" role="presentation">
 		  <div class="Dropdown_dropdown__kXFHw">
 			<div class="Dropdown_flexCenter__4gAzT"> <a href="#" class="nav-link">${i18n().visualization_tools}
 			  <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-tj5bde-Svg">
@@ -33,13 +33,30 @@
 		  </div>
 		</li>
 		</a>
-		</li>
-		
-		
-        <li class="nav-item me-5" role="presentation"><a class="nav-link" href="${homeUrl}/team">${i18n().team}</a></li>
-        <li class="nav-item me-5" role="presentation"><a class="nav-link" href="${homeUrl}/about">${i18n().about_brcris}</a></li>
+		</li>  -->
+    <li class="nav-item me-5" role="presentation"><a class="nav-link" href="${homeUrl}/team">${i18n().team}</a></li>
+    <li class="nav-item me-5" role="presentation"><a class="nav-link" href="${homeUrl}/about">${i18n().about_brcris}</a></li>
 		<li class="nav-item me-5" role="presentation"><a class="nav-link" href="${homeUrl}/contact">${i18n().brcris_contact}</a></li>
-		<li class="nav-item me-5" role="presentation"><div class="Dropdown_dropdown__kXFHw"><div class="Dropdown_flexCenter__4gAzT"><a href="#" class="nav-link">${i18n().lang_menu_en}<svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-tj5bde-Svg"><path fill="#fff" d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path></svg></a></div><div class="Dropdown_dropdownContent__5gxWP"><a href="${urls.base}/selectLocale?selection=en_US">${i18n().lang_menu_en}</a><a href="${urls.base}/selectLocale?selection=pt_BR">${i18n().lang_menu_pt}</a></div></div></li></a></li>
+		<li class="nav-item me-5" role="presentation">
+		<div class="Dropdown_dropdown__kXFHw">
+		<div class="Dropdown_flexCenter__4gAzT">
+		<a href="#" class="nav-link">
+		<#if i18n().lang_menu_en == "English">
+        ${i18n().lang_menu_en}
+    <#else>
+        ${i18n().lang_menu_pt}
+    </#if>
+		<svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-tj5bde-Svg"><path fill="#fff" d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path></svg>
+		</a>
+		</div>
+		<div class="Dropdown_dropdownContent__5gxWP">
+		<a href="${urls.base}/selectLocale?selection=en_US">${i18n().lang_menu_en}</a>
+		<a href="${urls.base}/selectLocale?selection=pt_BR">${i18n().lang_menu_pt}</a>
+		</div>
+		</div>
+		</li>
+		</a>
+		</li>
       </ul>
     </div>
   </div>
