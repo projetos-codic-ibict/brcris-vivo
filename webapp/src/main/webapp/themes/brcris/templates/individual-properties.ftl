@@ -12,7 +12,7 @@
     <article class="property" role="article">
         <#-- Property display name -->
         <#if rangeClass == "Authorship" && individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
-            <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property />
+            <span dynamicKey="${dynamicKey}" id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name} <@p.addLink property editable /> <@p.verboseDisplay property />
                 <a id="managePubLink" class="manageLinks" href="${urls.base}/managePublications?subjectUri=${subjectUri[1]!}" title="${i18n().manage_publications_link}" <#if verbose>style="padding-top:10px"</#if> >
                     ${i18n().manage_publications_link}
                 </a>
@@ -33,11 +33,11 @@
             <span id="${property.localName}" title="${property.publicDescription!}">${property.name}<@p.verboseDisplay property /></span>
         <#elseif rangeClass == "Title" && property.statements?has_content && editable >
             <span id="${property.localName}" title="${property.publicDescription!}">${property.name}<@p.verboseDisplay property /></span>
-<#elseif rangeClass == "Authorship" && !individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
-  <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
-<#elseif rangeClass == "ResearcherRole" && !individual.editable>
-  <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
-<#else>
+        <#elseif rangeClass == "Authorship" && !individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
+        <span dynamicKey="${dynamicKey}" id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
+        <#elseif rangeClass == "ResearcherRole" && !individual.editable>
+        <span id="${property.localName}-${rangeClass}" title="${property.publicDescription!}">${property.name}<@p.addLink property editable /><@p.verboseDisplay property /></span>
+        <#else>
             <#assign dynamicKey = property.name?lower_case?replace("/", "_")?replace(" ", "_")>
             <#assign translatedValue = i18n()[dynamicKey]!property.name>
             <#if translatedValue?starts_with("ERROR:")>
