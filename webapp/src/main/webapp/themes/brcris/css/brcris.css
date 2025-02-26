@@ -151,6 +151,7 @@ section article.property ul.property-list li {
   padding: 0;
   background-color: inherit;
   margin-bottom: 4px;
+  width: 800px;
 }
 
 section article.property > span:after {
@@ -281,6 +282,9 @@ ul#individual-facultyMemberships li {
   .subclass > span {
     width: 100%;
   }
+  section article.property ul.property-list li {
+    width: 100%;
+ }
   ul#individual-hasResearchArea {
     display: flex;
     flex-direction: column;
@@ -292,4 +296,5 @@ ul#individual-facultyMemberships li {
   .mobile-hidden {
     display: none;
   }
+  
 }
