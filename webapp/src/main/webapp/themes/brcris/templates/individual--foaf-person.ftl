@@ -64,10 +64,12 @@
             </#if>
             <!-- Positions -->
             <#include "individual-positions.ftl">
+                <!-- citation name -->
+            <#include "citationName.ftl">
                 <!-- lattes -->
-        <#include "lattesIdentifier.ftl">
-                 <!-- orcid -->
-        <#include "orcid.ftl">
+            <#include "lattesIdentifier.ftl">
+                    <!-- orcid -->
+            <#include "orcid.ftl">
         </header>
 
                 <!-- Overview -->
