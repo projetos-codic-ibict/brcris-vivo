@@ -145,3 +145,7 @@
         <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-lattesId.xml</display:listViewConfigFile>
     </rdf:Description>
 </rdf:RDF>
+
+<rdf:Description rdf:about="https://brcris.ibict.br/ontology/citationName">
+    <display:listViewConfigFile rdf:datatype="http://www.w3.org/2001/XMLSchema#string">listViewConfig-citationName.xml</display:listViewConfigFile>
+</rdf:Description>
