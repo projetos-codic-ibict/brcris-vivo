@@ -20,7 +20,7 @@
       </svg>
       </a></div>
     <div class="footer">
-      <picture><img src="${urls.theme}/images/footer-logo.png" class="logo-rodape" alt="imagem com logo do ibict, minc e gov.br"></picture>
+      <picture><img src="${urls.theme}/images/logo-rodape.png" class="logo-rodape" alt="imagem com logo do ibict, minc e gov.br"></picture>
       <p class="footer-adress">Instituto Brasileiro de Informação em Ciência e Tecnologia (Ibict)<br>
         SAUS Quadra 5 - Lote 6 Bloco H - Asa sul - CEP: 70.070-912 - Brasília - DF</p>
     </div>
