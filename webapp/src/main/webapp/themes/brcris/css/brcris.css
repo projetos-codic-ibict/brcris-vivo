@@ -266,6 +266,10 @@ ul#individual-facultyMemberships li {
   max-width: 1rem;
 }
 
+.additionalItems li {
+  display: inline;
+  margin-right: 8px;}
+
 /* CSS para telas menores que 768px(celulares e tablets pequenos) */
 @media only screen and (max-width: 768px) {
   .navbar {
