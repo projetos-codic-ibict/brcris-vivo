@@ -121,3 +121,11 @@ $(document).ready(function () {
         }
     }
 });
+
+$(document).ready(function() {
+    $('#hasResearchArea-noRangeClass-List li a').replaceWith(function() {
+        return $('<p />', {
+            html: $(this).html()
+        });
+    });
+})
