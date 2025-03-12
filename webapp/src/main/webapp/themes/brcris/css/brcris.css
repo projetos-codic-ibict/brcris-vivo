@@ -151,7 +151,6 @@ section article.property ul.property-list li {
   padding: 0;
   background-color: inherit;
   margin-bottom: 4px;
-  width: 800px;
 }
 
 section article.property > span:after {
@@ -223,7 +222,10 @@ ul#individual-facultyMemberships li {
   flex-wrap: wrap;
 }
 
-#freetextKeyword-noRangeClass-List {
+#freetextKeyword-noRangeClass-List, 
+#series-noRangeClass-List,
+#pageStart-noRangeClass-List,
+#volume-noRangeClass-List{
   list-style: none;
 }
 
@@ -244,6 +246,11 @@ ul#individual-facultyMemberships li {
 #series-noRangeClass-List li:last-child:after {
   content: "";
 }
+
+#relatedBy-Authorship-List li {
+  width:800px
+}
+
 .researchAreaTip {
   border: 1px solid #e83ca1;
   background-color: #f7f7f7;
@@ -283,9 +290,9 @@ ul#individual-facultyMemberships li {
   .subclass > span {
     width: 100%;
   }
-  section article.property ul.property-list li {
-    width: 100%;
- }
+  #relatedBy-Authorship-List li {
+    width:100%
+  }
   ul#individual-hasResearchArea {
     display: flex;
     flex-direction: column;
