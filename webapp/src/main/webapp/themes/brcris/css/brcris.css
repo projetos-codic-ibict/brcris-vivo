@@ -211,6 +211,10 @@ ul#individual-facultyMemberships li {
   margin-bottom: 16px;
 }
 
+#freetextKeyword{
+  white-space: nowrap;
+}
+
 #pageEnd-noRangeClass-List,
 #pageStart-noRangeClass-List,
 #volume-noRangeClass-List,
@@ -219,7 +223,6 @@ ul#individual-facultyMemberships li {
 #series-noRangeClass-List {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
 }
 
 #freetextKeyword-noRangeClass-List, 
@@ -246,6 +249,10 @@ ul#individual-facultyMemberships li {
 #series-noRangeClass-List li:last-child:after {
   content: "";
 }
+
+#freetextKeyword-noRangeClass-List {
+  width:800px;
+} 
 
 #relatedBy-Authorship-List li {
   width:800px
@@ -297,6 +304,10 @@ ul#individual-facultyMemberships li {
   #relatedBy-Authorship-List li {
     width:100%
   }
+
+  #freetextKeyword-noRangeClass-List{ 
+    width:100%;
+  } 
   ul#individual-hasResearchArea {
     display: flex;
     flex-direction: column;
