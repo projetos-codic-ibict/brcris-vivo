@@ -230,7 +230,7 @@ ul#individual-facultyMemberships li {
 #series-noRangeClass-List,
 #pageStart-noRangeClass-List,
 #volume-noRangeClass-List{
-  list-style: none;
+  list-style:none
 }
 
 #pageEnd-noRangeClass-List li:after,
@@ -271,9 +271,9 @@ ul#individual-facultyMemberships li {
   max-width: 1rem;
 }
 
-.additionalItems li {
+#freetextKeyword-noRangeClass-List .additionalItems li {
   display: inline;
-  margin-right: 8px;}
+}
 
 /* CSS para telas menores que 768px(celulares e tablets pequenos) */
 @media only screen and (max-width: 768px) {
