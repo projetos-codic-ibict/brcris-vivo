@@ -280,6 +280,11 @@ ul#individual-facultyMemberships li {
   overflow-wrap: break-word; 
 }
 
+.column-container{
+  display: flex;
+  flex-direction: column;
+} 
+
 /* CSS para telas menores que 768px(celulares e tablets pequenos) */
 @media only screen and (max-width: 768px) {
   .navbar {

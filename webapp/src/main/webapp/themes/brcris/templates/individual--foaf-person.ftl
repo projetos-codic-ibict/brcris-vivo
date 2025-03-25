@@ -86,8 +86,16 @@
     </section>
 
         <section id="right-hand-column" role="region">
-        <#include "individual-visualizationFoafPerson.ftl">
-        <#if editable>
+        <div class="column-container" role="region">
+            <div>
+
+         <#include "popover.ftl">
+                </div>
+            <div>
+                    <#include "individual-visualizationFoafPerson.ftl">
+             </div>
+
+                </div>        <#if editable>
             <#if claimSources?size &gt; 0>
                 <br />${i18n().claim_publications_by}<br />
                 <#if claimSources?seq_contains("doi")>
