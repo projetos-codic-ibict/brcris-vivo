@@ -285,7 +285,21 @@ ul#individual-facultyMemberships li {
   flex-direction: column;
 } 
 
-/* CSS para telas menores que 768px(celulares e tablets pequenos) */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;  
+  width: 100%;
+}
+
+.title-section {
+  flex: 1; 
+}
+
+.popover-section {
+  margin-left: 20px;  
+  white-space: nowrap;  
+}
+
 @media only screen and (max-width: 768px) {
   .navbar {
     min-height: 90px;

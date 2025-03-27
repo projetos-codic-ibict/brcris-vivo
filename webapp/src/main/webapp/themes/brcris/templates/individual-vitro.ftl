@@ -44,6 +44,8 @@
         </#if>
 
         <header>
+    <div class="header-wrapper">
+        <div class="title-section">
             <#if relatedSubject??>
                 <@lmt.addCitationMetaTag uri="http://vivoweb.org/ontology/core#Title" content="${relatedSubject.name}" />
                 <h2>${relatedSubject.relatingPredicateDomainPublic} for ${relatedSubject.name}</h2>
@@ -53,14 +55,19 @@
                 <h1 class="fn" itemprop="name"> 
                     <#-- Label -->
                     <@p.label individual editable labelCount localesCount languageCount/>
-
                     <span id="iconControlsVitro"><img id="uriIcon" title="${individual.uri}" class="middle" src="${urls.theme}/images/rdf-icon.png" alt="uri icon"/></span>
-                    
                     <#--  Most-specific types -->
                     <@p.mostSpecificTypes individual />
                 </h1>
             </#if>
-        </header>
+        </div>
+
+        <div class="popover-section">
+            <#include "popover.ftl">
+        </div>
+    </div>
+</header>
+
 
     <#if individualProductExtension??>
         ${individualProductExtension}
