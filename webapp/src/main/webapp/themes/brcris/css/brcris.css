@@ -252,7 +252,9 @@ ul#individual-facultyMemberships li {
 }
 
 
-#relatedBy-Authorship-List li, #freetextKeyword-noRangeClass-List {
+#relatedBy-Authorship-List li,
+#freetextKeyword-noRangeClass-List,
+#relatedBy-AdvisingRelationship-List {
   width:800px
 }
 
@@ -324,7 +326,8 @@ ul#individual-facultyMemberships li {
     width: 100%;
   }
   #relatedBy-Authorship-List li,
-  #freetextKeyword-noRangeClass-List {
+  #freetextKeyword-noRangeClass-List,
+  #relatedBy-AdvisingRelationship-List {
     width:100%
   }
 
