@@ -229,7 +229,8 @@ ul#individual-facultyMemberships li {
 #freetextKeyword-noRangeClass-List, 
 #series-noRangeClass-List,
 #pageStart-noRangeClass-List,
-#volume-noRangeClass-List{
+#volume-noRangeClass-List,
+#pageEnd-noRangeClass-List{
   list-style:none
 }
 
@@ -254,7 +255,8 @@ ul#individual-facultyMemberships li {
 
 #relatedBy-Authorship-List li,
 #freetextKeyword-noRangeClass-List,
-#relatedBy-AdvisingRelationship-List {
+#relatedBy-AdvisingRelationship-List,
+#description-noRangeClass-List {
   width:800px
 }
 
@@ -277,7 +279,8 @@ ul#individual-facultyMemberships li {
   display: inline;
 }
 
-#groupUrl-noRangeClass-List li a {
+#groupUrl-noRangeClass-List li a,
+#dateFiled-DateTimeValue-List li a {
   word-break: break-all;
   overflow-wrap: break-word; 
 }
@@ -327,7 +330,8 @@ ul#individual-facultyMemberships li {
   }
   #relatedBy-Authorship-List li,
   #freetextKeyword-noRangeClass-List,
-  #relatedBy-AdvisingRelationship-List {
+  #relatedBy-AdvisingRelationship-List,
+  #description-noRangeClass-List {
     width:100%
   }
 
