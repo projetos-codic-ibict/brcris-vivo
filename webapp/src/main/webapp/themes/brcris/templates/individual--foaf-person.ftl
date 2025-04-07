@@ -28,49 +28,62 @@
     <section id="individual-info" ${infoClass!} role="region">
         <#include "individual-adminPanel.ftl">
 
-        <header>
-            <#if relatedSubject??>
-                <h2>${relatedSubject.relatingPredicateDomainPublic} ${i18n().indiv_foafperson_for} ${relatedSubject.name}</h2>
-                <p><a href="${relatedSubject.url}" title="${i18n().indiv_foafperson_return}">&larr; ${i18n().indiv_foafperson_return} ${relatedSubject.name}</a></p>
-            <#else>
-                <h1 class="foaf-person">
-                    <#-- Label -->
-                    <span itemprop="name" class="fn"><@p.label individual editable labelCount localesCount/></span>
-                </h1>
-				
+      <header>
+    <#if relatedSubject??>
+        <h2>
+            ${relatedSubject.relatingPredicateDomainPublic} ${i18n().indiv_foafperson_for} ${relatedSubject.name}
+        </h2>
+        <p>
+            <a href="${relatedSubject.url}" title="${i18n().indiv_foafperson_return}">
+                &larr; ${i18n().indiv_foafperson_return} ${relatedSubject.name}
+            </a>
+        </p>
+    <#else>
+        <!-- TÍTULO + POPOVER JUNTOS AQUI -->
+        <div class="title-with-popover">
+            <h1 class="foaf-person">
+                <span itemprop="name" class="fn">
+                    <@p.label individual editable labelCount localesCount/>
+                </span>
+            </h1>
 
-				
-				
-                <section id="preferredTitle">
-                    <#--  Display preferredTitle if it exists; otherwise mostSpecificTypes -->
-                    <#assign title = propertyGroups.pullProperty("http://purl.obolibrary.org/obo/ARG_2000028","http://www.w3.org/2006/vcard/ns#Title")!>
-                    <#if title?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-                        <#if (title.statements?size < 1) >
-                            <@p.addLinkWithLabel title editable />
-                        <#elseif editable>
-                            <h2>${title.name?capitalize!}</h2>
-                            <@p.verboseDisplay title />
-                        </#if>
-                        <#list title.statements as statement>
-                            <span itemprop="jobTitle" class="display-title<#if editable>-editable</#if>">${statement.preferredTitle}</span>
-                            <@p.editingLinks "${title.localName}" "${title.name}" statement editable title.rangeUri />
-                        </#list>
-                    </#if>
-                    <#-- If preferredTitle is unpopulated, display mostSpecificTypes -->
-                    <#if ! (title.statements)?has_content>
-                        <@p.mostSpecificTypes individual />
-                    </#if>
-                </section>
+            <!-- Popover ao lado -->
+            <div class="popover-inline">
+                <#include "popover.ftl">
+            </div>
+        </div>
+
+        <section id="preferredTitle">
+            <#assign title = propertyGroups.pullProperty(
+                "http://purl.obolibrary.org/obo/ARG_2000028",
+                "http://www.w3.org/2006/vcard/ns#Title"
+            )!>
+            <#if title?has_content>
+                <#if (title.statements?size < 1)>
+                    <@p.addLinkWithLabel title editable />
+                <#elseif editable>
+                    <h2>${title.name?capitalize!}</h2>
+                    <@p.verboseDisplay title />
+                </#if>
+                <#list title.statements as statement>
+                    <span itemprop="jobTitle" class="display-title<#if editable>-editable</#if>">
+                        ${statement.preferredTitle}
+                    </span>
+                    <@p.editingLinks "${title.localName}" "${title.name}" statement editable title.rangeUri />
+                </#list>
             </#if>
-            <!-- Positions -->
-            <#include "individual-positions.ftl">
-                <!-- citation name -->
-            <#include "citationName.ftl">
-                <!-- lattes -->
-            <#include "lattesIdentifier.ftl">
-                    <!-- orcid -->
-            <#include "orcid.ftl">
-        </header>
+            <#if !(title.statements)?has_content>
+                <@p.mostSpecificTypes individual />
+            </#if>
+        </section>
+    </#if>
+
+    <!-- Demais seções -->
+    <#include "individual-positions.ftl">
+    <#include "citationName.ftl">
+    <#include "lattesIdentifier.ftl">
+    <#include "orcid.ftl">
+</header>
 
                 <!-- Overview -->
         <#include "individual-overview.ftl">
@@ -88,8 +101,9 @@
         <section id="right-hand-column" role="region">
         <div class="column-container" role="region">
             <div>
-
+     <div class="popover-hiden" role="region">
          <#include "popover.ftl">
+         </div>
                 </div>
             <div>
                     <#include "individual-visualizationFoafPerson.ftl">

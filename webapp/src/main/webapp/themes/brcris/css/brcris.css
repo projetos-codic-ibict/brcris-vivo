@@ -305,6 +305,23 @@ ul#individual-facultyMemberships li {
   white-space: nowrap;  
 }
 
+#data-info {
+  white-space: nowrap;
+}
+
+.title-with-popover {
+  display: flex;
+  justify-content:space-between;
+  gap: 8px; 
+}
+
+.popover-inline {
+  display: inline-block;
+}
+
+.popover-inline{
+  display: none;
+}
 @media only screen and (max-width: 768px) {
   .navbar {
     min-height: 90px;
@@ -346,5 +363,10 @@ ul#individual-facultyMemberships li {
   .mobile-hidden {
     display: none;
   }
-  
+  .popover-hiden{
+    display: none;
+  }
+  .popover-inline{
+    display: block;
+  }
 }
