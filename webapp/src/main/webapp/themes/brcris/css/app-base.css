@@ -28,6 +28,11 @@ html {
     background: linear-gradient(180deg, #fcfcfc 0, #fff);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfcfc",endColorstr="#ffffff",GradientType=0);
 }
+
+h1.fn .display-title {
+    font-size:14px
+}
+
 @media (max-width: 800px) {
     .sui-layout-body:after {
         display: none;
