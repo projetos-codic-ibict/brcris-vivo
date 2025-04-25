@@ -322,6 +322,32 @@ ul#individual-facultyMemberships li {
 .popover-inline{
   display: none;
 }
+
+.qtip.uriIconTip {
+  max-width: 90vw !important;
+  width: auto !important;
+  font-size: 0.9rem; /* texto menor */
+  padding: 0.75rem;
+}
+
+.qtip.uriIconTip h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.qtip-content input#uriLink {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0.4rem;
+  box-sizing: border-box;
+}
+
+.qtip-content a.close {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
 @media only screen and (max-width: 768px) {
   .navbar {
     min-height: 90px;
