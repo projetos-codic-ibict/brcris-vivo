@@ -131,7 +131,7 @@ $(document).ready(function() {
 })
 
 $(document).ready(function() {
-    $('#RO_0002351-noRangeClass-List li a').replaceWith(function() {
+    $('#hasResearchLine-Concept-List li a').replaceWith(function() {
         return $('<p />', {
             html: $(this).html()
         });
