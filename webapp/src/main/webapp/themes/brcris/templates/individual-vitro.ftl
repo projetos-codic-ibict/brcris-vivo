@@ -64,6 +64,8 @@
 
         <div class="popover-section">
             <#include "popover.ftl">
+            <@popover id="data-info"/>
+
         </div>
     </div>
 </header>

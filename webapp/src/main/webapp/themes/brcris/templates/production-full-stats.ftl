@@ -19,6 +19,7 @@
             <div class="sub_headings">
                 <h1><a href="${urlPrefix}${authorUri}" title="${firstRow["authorName"]}">${firstRow["authorName"]}</a></h1>
 								<#include "popover.ftl">
+								<@popover id="data-info"/>
             </div>
             <#break>
         </#list>

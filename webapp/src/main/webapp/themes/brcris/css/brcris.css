@@ -326,7 +326,7 @@ ul#individual-facultyMemberships li {
 .qtip.uriIconTip {
   max-width: 90vw !important;
   width: auto !important;
-  font-size: 0.9rem; /* texto menor */
+  font-size: 0.9rem; 
   padding: 0.75rem;
 }
 

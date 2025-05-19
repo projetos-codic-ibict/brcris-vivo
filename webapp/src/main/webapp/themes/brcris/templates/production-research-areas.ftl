@@ -17,6 +17,7 @@
             	<h2 class="title">${i18n().prod_research_areas_full}</h2>
 			</hgroup>
 			<#include "popover.ftl">
+			<@popover id="data-info"/>
             <#break>
         </#list>
     </div>

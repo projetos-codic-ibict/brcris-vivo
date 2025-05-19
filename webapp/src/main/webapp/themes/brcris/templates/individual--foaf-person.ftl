@@ -5,6 +5,7 @@
     in the Wilma theme and should reside in the themes/wilma/templates directory.
 -->
 
+<#include "popover.ftl">
 <#include "individual-setup.ftl">
 <#import "lib-vivo-properties.ftl" as vp>
 <#--Number of labels present-->
@@ -49,9 +50,8 @@
 
             <!-- Popover ao lado -->
             <div class="popover-inline">
-                <#include "popover.ftl">
+            <@popover id="grafico1" /></div>
             </div>
-        </div>
 
         <section id="preferredTitle">
             <#assign title = propertyGroups.pullProperty(
@@ -102,7 +102,9 @@
         <div class="column-container" role="region">
             <div>
      <div class="popover-hiden" role="region">
-         <#include "popover.ftl">
+
+
+<@popover id="data-info-popover" />
          </div>
                 </div>
             <div>

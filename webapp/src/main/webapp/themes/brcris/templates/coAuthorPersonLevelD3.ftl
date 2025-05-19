@@ -260,6 +260,8 @@ $(document).ready(function(){
         </hgroup>
 
             <#include "popover.ftl">
+            <@popover id="data-info"/>
+
     </div>
     <#if (numOfCoAuthorShips?? && numOfCoAuthorShips > 0) || (numOfAuthors?? && numOfAuthors > 0) >
         <div class = "graphml-file-link">(<a href="${egoCoAuthorshipNetworkDataFileURL}" title="GraphML ${i18n().file}">GraphML ${i18n().file}</a>)</div>

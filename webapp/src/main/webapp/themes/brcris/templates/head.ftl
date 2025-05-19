@@ -30,16 +30,23 @@
 	
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var popoverTriggerEl = document.getElementById('data-info');
-            var popover = new bootstrap.Popover(popoverTriggerEl, {
-                container: 'body',
-                html: true,
-                trigger: 'focus'
-            });
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const ids = ['data-info', 'data-info-popover'];
+
+        ids.forEach(function(id) {
+            const popoverTriggerEl = document.getElementById(id);
+            if (popoverTriggerEl) {
+                new bootstrap.Popover(popoverTriggerEl, {
+                    container: 'body',
+                    html: true,
+                    trigger: 'focus'
+                });
+            }
         });
-    </script>
+    });
+</script>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <#include "headScripts.ftl">

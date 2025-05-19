@@ -16,6 +16,7 @@
            			<h2 class="title">${i18n().prod_tag_cloud_full}</h2>
             </hgroup>
             <#include "popover.ftl">
+            <@popover id="data-info"/>
             <#break>
         </#list>
 	</div>
