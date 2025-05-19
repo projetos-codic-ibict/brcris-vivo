@@ -50,7 +50,7 @@
 
             <!-- Popover ao lado -->
             <div class="popover-inline">
-            <@popover id="grafico1" /></div>
+            <@popover id="data-info" /></div>
             </div>
 
         <section id="preferredTitle">

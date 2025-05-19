@@ -349,7 +349,8 @@ ul#individual-facultyMemberships li {
 }
 
  .popover-hiden{
-    margin-bottom:0.5rem
+    margin-bottom:0.5rem;
+    white-space: nowrap;
   }
 @media only screen and (max-width: 768px) {
   .navbar {
