@@ -137,3 +137,27 @@ $(document).ready(function() {
         });
     });
 })
+
+function baixarPublicacoes() {
+    const lista = document.querySelectorAll('#relatedBy-Authorship-List li');
+    if (!lista.length) {
+        alert("Nenhuma publicação encontrada.");
+        return;
+    }
+
+    let linhas = [];
+    lista.forEach(item => {
+        const texto = item.innerText.trim().replace(/\n/g, ' ').replace(/\s+/g, ' ');
+        linhas.push(`"${texto}"`);
+    });
+
+    const csvContent = "data:text/csv;charset=utf-8," + linhas.join("\n");
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "publicacoes.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}

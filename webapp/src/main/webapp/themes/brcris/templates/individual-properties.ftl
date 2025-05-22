@@ -61,6 +61,17 @@
             <#else>
                 <@p.objectProperty property editable />
             </#if>
+            
+        <#if (rangeClass == "Authorship" && property.localName == "relatedBy") &&
+        (property.name?lower_case == "selected publications")>
+    <div style="margin-top: 5px; display: block;">
+        <a href="javascript:void(0);" onclick="baixarPublicacoes()" 
+         >
+            Baixar CSV
+        </a>
+    </div>
+</#if>
         </ul>
+
     </article> <!-- end property -->
 </#list>
