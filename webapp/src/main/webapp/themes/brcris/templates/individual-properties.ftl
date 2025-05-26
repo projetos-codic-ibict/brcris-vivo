@@ -62,16 +62,16 @@
                 <@p.objectProperty property editable />
             </#if>
             
-        <#if (rangeClass == "Authorship" && property.localName == "relatedBy") &&
-        (property.name?lower_case == "selected publications" || property.name?lower_case == "publicações selecioandas")>
-    <div style="margin-top: 5px; display: block;">
-        <a href="javascript:void(0);" onclick="baixarPublicacoes()" 
-         >
-            Baixar CSV
-        </a>
-    </div>
-</#if>
+        
         </ul>
-
+        <#if (rangeClass == "Authorship" && property.localName == "relatedBy") &&
+                (property.name?lower_case == "selected publications" || property.name?lower_case == "publicações selecioandas")>
+            <div style="margin-top: 5px; display: block;">
+                <a href="javascript:void(0);" onclick="baixarPublicacoes()" 
+                >
+                    Baixar CSV
+                </a>
+            </div>
+        </#if>
     </article> <!-- end property -->
 </#list>
