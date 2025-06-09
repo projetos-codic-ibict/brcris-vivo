@@ -179,3 +179,19 @@ $(document).ready(function () {
         $li.text("Sim");
     }
 });
+$(document).ready(function () {
+    const $ul = $('#twoYearMeanCite-noRangeClass-List');
+    const $li = $ul.find('li').first();
+
+    if ($li.length) {
+        const valorOriginal = parseFloat($li.text());
+        if (!isNaN(valorOriginal)) {
+            $li.text(valorOriginal.toFixed(1)); 
+        }
+    }
+});
+
+$(document).ready(function () {
+    const $ul = $('#hasPublicationVenue-noRangeClass-List');
+    $ul.find('li').not(':first').remove(); 
+});
