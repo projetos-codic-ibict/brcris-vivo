@@ -161,3 +161,12 @@ function baixarPublicacoes() {
     link.click();
     document.body.removeChild(link);
 }
+
+$(document).ready(function () {
+    const $ul = $('#isOa-noRangeClass-List');
+    const $li = $ul.find('li').first();
+
+    if ($li.length) {
+        $li.text("Sim");
+    }
+});
