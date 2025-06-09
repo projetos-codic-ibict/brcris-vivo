@@ -170,3 +170,12 @@ $(document).ready(function () {
         $li.text("Sim");
     }
 });
+
+$(document).ready(function () {
+    const $ul = $('#isInDoaj-noRangeClass-List');
+    const $li = $ul.find('li').first();
+
+    if ($li.length) {
+        $li.text("Sim");
+    }
+});
