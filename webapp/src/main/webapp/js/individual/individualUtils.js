@@ -195,3 +195,21 @@ $(document).ready(function () {
     const $ul = $('#hasPublicationVenue-noRangeClass-List');
     $ul.find('li').not(':first').remove(); 
 });
+
+$(document).ready(function () {
+    const $lis = $('#hasLeader-noRangeClass-List li');
+
+    let found = false;
+
+    $lis.each(function () {
+        const href = $(this).find('a').attr('href') || '';
+
+        const isPerson = href.startsWith('/vivo/display/pers_');
+
+        if (!found && isPerson) {
+            found = true; 
+        } else {
+            $(this).remove(); 
+        }
+    });
+});
