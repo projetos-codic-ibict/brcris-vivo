@@ -213,3 +213,11 @@ $(document).ready(function () {
         }
     });
 });
+
+$(document).ready(function () {
+    $('.address-line').each(function () {
+        if ($(this).text().trim() === 'Não informado') {
+            $(this).remove();
+        }
+    });
+});

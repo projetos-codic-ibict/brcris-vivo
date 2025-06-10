@@ -26,7 +26,9 @@
             </p>
         </#if>
         <#if statement.region?has_content>
-           
+            <p class="address-line">
+                ${statement.region}
+            </p>
         </#if>
         <#if statement.country?has_content>
             <p class="address-line" style="float:left; padding-right:20px">
