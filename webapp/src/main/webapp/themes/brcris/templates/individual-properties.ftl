@@ -15,6 +15,13 @@
         <#assign translatedValue = property.name>
     </#if>
 
+    <#-- Custom translation for "member_of" when localName ends with ID 53 (affiliation) -->
+    <#if property.localName == "RO_0000053" && dynamicKey == "member_of">
+        <#assign translatedValue = "${i18n().affiliation}">
+    <#elseif translatedValue?starts_with("ERROR:")>
+        <#assign translatedValue = property.name>
+    </#if>
+
     <article class="property" role="article">
         <#-- Property display name -->
         <#if rangeClass == "Authorship" && individual.editable && (property.domainUri)?? && property.domainUri?contains("Person")>
