@@ -221,3 +221,22 @@ $(document).ready(function () {
         }
     });
 });
+
+$(document).ready(function () {
+    const $ul = $('#openalexIdentifier-noRangeClass-List');
+    const $li = $ul.find('li').first();
+
+    if ($li.length) {
+        const url = $li.text().trim();
+
+        const $a = $('<a>', {
+            href: url,
+            text: url,
+            target: '_blank',
+            rel: 'noopener noreferrer',
+            role: 'listitem'
+        });
+
+        $li.replaceWith($a);
+    }
+});
