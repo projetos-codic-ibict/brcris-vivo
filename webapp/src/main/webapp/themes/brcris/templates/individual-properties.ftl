@@ -62,15 +62,20 @@
         <#if limit < 5>
             <#assign limit = 5 />
         </#if>
-        <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
-            <#if property.type == "data">
-                <@p.dataPropertyList property editable />
-            <#else>
-                <@p.objectProperty property editable />
-            </#if>
-            
-        
-        </ul>
+        <#if property.name?lower_case == "data de arquivamento">
+    <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
+        <#list property.statements as statement>
+            <li>${statement.value!statement.label!}</li>
+        </#list>
+    </ul>
+<#else>
+    <#if property.type == "data">
+        <@p.dataPropertyList property editable />
+    <#else>
+        <@p.objectProperty property editable />
+    </#if>
+</#if>
+
         <#if (rangeClass == "Authorship" && property.localName == "relatedBy") &&
                 (property.name?lower_case == "selected publications" || property.name?lower_case == "publicações selecioandas")>
             <div style="margin-top: 5px; display: block;">
