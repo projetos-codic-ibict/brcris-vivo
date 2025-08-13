@@ -63,12 +63,16 @@
             <#assign limit = 5 />
         </#if>
         <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
-            <#if property.type == "data">
-                <@p.dataPropertyList property editable />
-            <#else>
-                <@p.objectProperty property editable />
-            </#if>
-            
+           <#if property.localName == "data_arquivamento">
+    <#list property.statements as stmt>
+        <li role="listitem">${stmt.valueLabel!stmt.value}</li>
+    </#list>
+<#elseif property.type == "data">
+    <@p.dataPropertyList property editable />
+<#else>
+    <@p.objectProperty property editable />
+</#if>
+
         
         </ul>
         <#if (rangeClass == "Authorship" && property.localName == "relatedBy") &&
