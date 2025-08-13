@@ -240,3 +240,12 @@ $(document).ready(function () {
         $li.replaceWith($a);
     }
 });
+
+
+$(document).ready(function() {
+    $('#hasSubjectArea-noRangeClass-List li a').replaceWith(function() {
+        return $('<p />', {
+            html: $(this).html()
+        });
+    });
+});
