@@ -63,15 +63,26 @@
             <#assign limit = 5 />
         </#if>
         <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
-           <#if property.localName == "data_arquivamento">
+           <<#if property.localName == "data_arquivamento">
     <#list property.statements as stmt>
-        <li role="listitem">${stmt.valueLabel!stmt.value}</li>
+        <#list stmt.value.statements as innerStmt>
+            <#if innerStmt.propertyURI?ends_with("data_hora")>
+                <li role="listitem">
+                    ${innerStmt.valueLabel!innerStmt.value}
+                    <#if innerStmt.hasInvalidFormat?? && innerStmt.hasInvalidFormat>
+                        <img class="invalidFormatImg" src="/vivo/images/iconAlert.png" width="18" alt=" Formato inválido" title=" Formato inválido">
+                        <span class="invalidFormatText">invalid format</span>
+                    </#if>
+                </li>
+            </#if>
+        </#list>
     </#list>
 <#elseif property.type == "data">
     <@p.dataPropertyList property editable />
 <#else>
     <@p.objectProperty property editable />
 </#if>
+
 
         
         </ul>
