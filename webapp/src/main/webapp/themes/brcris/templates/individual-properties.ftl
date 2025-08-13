@@ -62,15 +62,18 @@
         <#if limit < 5>
             <#assign limit = 5 />
         </#if>
-        <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
-            <#if property.type == "data">
-                <@p.dataPropertyList property editable />
-            <#else>
-                <@p.objectProperty property editable />
-            </#if>
-            
         
-        </ul>
+       <ul class="property-list" role="list" id="${property.localName}-${rangeClass}-List" displayLimit="${limit}">
+    <#list property.statements as statement>
+        <#-- Se for objeto do tipo DateTimeValue ou qualquer data, mostra só o valor -->
+        <#if rangeClass == "DateTimeValue" || property.type == "data">
+            <li>${statement.value!statement.label!}</li>
+        <#else>
+            <li><@p.objectProperty property editable /></li>
+        </#if>
+    </#list>
+</ul>
+
         <#if (rangeClass == "Authorship" && property.localName == "relatedBy") &&
                 (property.name?lower_case == "selected publications" || property.name?lower_case == "publicações selecioandas")>
             <div style="margin-top: 5px; display: block;">
