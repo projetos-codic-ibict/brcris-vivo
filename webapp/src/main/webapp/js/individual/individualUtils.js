@@ -249,3 +249,22 @@ $(document).ready(function() {
         });
     });
 });
+
+// URL do recurso
+var url = "/vivo/display/rgdate_2aa18ff9-c35b-4f58-a2b8-c6ba731f68d8";
+
+fetch(url)
+  .then(response => response.text())
+  .then(html => {
+    // Cria um elemento temporário para parsear o HTML
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(html, "text/html");
+
+    // Procura pelo elemento que contém a data (ex.: id="dateTime-noRangeClass-List")
+    var li = doc.querySelector("#dateTime-noRangeClass-List li");
+    if(li) {
+      var data = li.textContent.trim();
+      console.log("Data de arquivamento:", data);
+    }
+  })
+  .catch(err => console.error(err));
