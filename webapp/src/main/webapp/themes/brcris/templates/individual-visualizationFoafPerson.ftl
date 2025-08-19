@@ -55,7 +55,7 @@
 
         <div class="collaboratorship-link-separator"></div>
 
-        <#-- Map of Science -->
+        <#-- Map of Science
         <div id="mapofscience_link_container" class="collaboratorship-link-container">
             <div class="collaboratorship-icon">
                 <a href="${mapOfScienceVisUrl}" title="${i18n().map_of_science}">
@@ -66,7 +66,7 @@
                 <a href="${mapOfScienceVisUrl}" title="${i18n().map_of_science}">${i18n().map_of_science}</a>
             </div>
         </div>
-
+        -->
         <div class="collaboratorship-link-separator"></div>
 
         <#-- Tag Cloud -->
