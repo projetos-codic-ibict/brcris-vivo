@@ -58,11 +58,13 @@
   	      	<div id="mapofscience_link_container" class="collaboratorship-link-container">
             	
 		<#-- CHANGED HERE -->
+        <#--
 		<#assign prodResAreaVisUrl = "${urls.base}/prod-res-area-vis?author=${individual.uri}">
 		<#assign prodAreasIcon = "${urls.theme}/images/production-areas-icon.png">
         	<div class="collaboratorship-icon">
                     <a href="${prodResAreaVisUrl}" title="${i18n().prod_research_areas}"><img src="${prodAreasIcon}" alt="${i18n().prod_research_areas}" width="25px" height="25px" /></a>
                 </div>
+                 -->
                 <div class="collaboratorship-link"><a href="${prodResAreaVisUrl}" title="${i18n().prod_research_areas}">${i18n().prod_research_areas}</a></div>
                 
                 <#assign prodTagCloudVisUrl = "${urls.base}/prod-tag-cloud-vis?author=${individual.uri}">
