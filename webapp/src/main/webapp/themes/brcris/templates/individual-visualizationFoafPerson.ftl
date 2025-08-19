@@ -53,8 +53,6 @@
             </div>
         </div>
 
-        <div class="collaboratorship-link-separator"></div>
-
         <#-- Map of Science
         <div id="mapofscience_link_container" class="collaboratorship-link-container">
             <div class="collaboratorship-icon">
