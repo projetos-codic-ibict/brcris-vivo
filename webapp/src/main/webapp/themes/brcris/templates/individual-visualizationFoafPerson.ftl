@@ -2,17 +2,11 @@
 
 <#-- Template for sparkline visualization on individual profile page -->
 
-<#-- Determine whether this person is an author -->
 <#assign isAuthor = p.hasVisualizationStatements(propertyGroups, "${core}relatedBy", "${core}Authorship") />
-
-<#-- Determine whether this person is involved in any grants -->
 <#assign obo_RO53 = "http://purl.obolibrary.org/obo/RO_0000053">
-
 <#assign isInvestigator = ( p.hasVisualizationStatements(propertyGroups, "${obo_RO53}", "${core}InvestigatorRole") ||
                             p.hasVisualizationStatements(propertyGroups, "${obo_RO53}", "${core}PrincipalInvestigatorRole") ||
                             p.hasVisualizationStatements(propertyGroups, "${obo_RO53}", "${core}CoPrincipalInvestigatorRole") ) >
-
-<#-- Determine if this person is an advisor -->
 <#assign isAdvisor = p.hasVisualizationStatements(propertyGroups, "${core}relatedBy", "${core}AdvisingRelationship") />
 
 <#if (isAuthor || isInvestigator)>
@@ -26,9 +20,8 @@
         <#assign fullPub = "${urls.theme}/images/publication-stats.png">
         <#assign coAuthorVisUrl = individual.coAuthorVisUrl()>
         <#assign mapOfScienceVisUrl = individual.mapOfScienceUrl()>
-
         <#assign googleJSAPI = "https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22visualization%22%2C%22version%22%3A%221%22%2C%22packages%22%3A%5B%22imagesparkline%22%5D%7D%5D%7D">
-        
+
         <span id="sparklineHeading">${i18n().publications_in_vivo}</span>
         <div id="vis_container_coauthor">&nbsp;</div>
         <div class="collaboratorship-link-separator"></div>
