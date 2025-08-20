@@ -250,17 +250,14 @@ $(document).ready(function() {
     });
 });
 
-// URL do recurso
 var url = "/vivo/display/rgdate_2aa18ff9-c35b-4f58-a2b8-c6ba731f68d8";
 
 fetch(url)
   .then(response => response.text())
   .then(html => {
-    // Cria um elemento temporário para parsear o HTML
     var parser = new DOMParser();
     var doc = parser.parseFromString(html, "text/html");
 
-    // Procura pelo elemento que contém a data (ex.: id="dateTime-noRangeClass-List")
     var li = doc.querySelector("#dateTime-noRangeClass-List li");
     if(li) {
       var data = li.textContent.trim();
@@ -268,3 +265,15 @@ fetch(url)
     }
   })
   .catch(err => console.error(err));
+
+  $(document).ready(function () {
+    $('article.property').each(function() {
+        var span = $(this).find('span#type');
+        var li = $(this).find('ul.property-list li').first();
+        if(span.length && li.length) {
+            if(span.text().trim() === 'Periódico científico' && li.text().trim() === 'journal') {
+                $(this).remove();
+            }
+        }
+    });
+});
